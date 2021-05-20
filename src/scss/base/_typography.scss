@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as mixins;
+
+h1,
+h2,
+th {
+    @include mixins.headings-main-style;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

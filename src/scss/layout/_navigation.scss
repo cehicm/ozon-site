@@ -1,0 +1,79 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+nav {
+    background: #222;
+    padding: 0 15px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5px;
+
+    .item {
+        padding: 10px;
+        order: 3;
+        width: 100%;
+        text-align: center;
+        display: none;
+
+        a {
+            display: block;
+            padding: 15px 5px;
+            font-family: "Poppins";
+            color: variables.$white;
+
+            &:hover::after {
+                color: #ccc;
+            }
+        }
+    }
+}
+
+.toggle {
+    order: 1;
+    font-size: 22px;
+    margin-left: auto;
+}
+
+.active .item {
+    display: block;
+    cursor: pointer;
+}
+
+.menu li.subitem a {
+    padding: 10px;
+    text-align: left;
+}
+
+.submenu {
+    display: none;
+}
+
+.submenu-active {
+    background-color: #111;
+    border-radius: 3px;
+}
+
+.submenu-active .submenu {
+    display: block;
+}
+.has-submenu i {
+    font-size: 12px;
+}
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900;
+    content: "\f078";
+    color: white;
+    padding-left: 5px;
+}
+.subitem a {
+    padding: 10px 15px;
+}

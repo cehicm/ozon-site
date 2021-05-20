@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-table {
+    display: flex;
+    flex-direction: column;
+
+    border-collapse: collapse;
+    color: variables.$black;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    thead {
+        @include mixins.headings-main-style;
+        padding: 10px;
+        text-decoration: overline;
+        border-bottom: none;
+    }
+
+    tr {
+        border-bottom: 1px dotted black;
+    }
+
+    td {
+        padding: 10px;
+        @include mixins.content-main-style;
+    }
+}
+
+.services-calc {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.content-main-style;
+    font-size: 1rem;
+
+    max-width: 320px;
+    width: 100%;
+    margin-top: 27px;
+    padding-top: 40px;
+    align-items: center;
+    border-top: 1px solid black;
+    background-color: gainsboro;
+}

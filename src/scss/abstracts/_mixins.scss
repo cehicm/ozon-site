@@ -1,7 +1,6 @@
 @use "./variables" as variables;
 
-@mixin heading-nav-font {
-    //rename
+@mixin headings-main-style {
     font-family: "Poppins", Verdana, Geneva, sans-serif;
     font-weight: 400;
     color: variables.$black;
@@ -9,24 +8,8 @@
     text-decoration: overline;
 }
 
-@mixin content {
+@mixin content-main-style {
     font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
     font-weight: 200;
     color: variables.$black;
-}
-.btn-primary {
-    padding: 10px 15px;
-    overflow: hidden;
-    cursor: pointer;
-    border: 1px solid #919191;
-    border-radius: 8px;
-    background-color: variables.$white;
-    color: variables.$black;
-    font-size: 0.9rem;
-
-    &:hover {
-        transition: 1s cubic-bezier(0.47, 0, 0.75, 0.72);
-        background: variables.$blue;
-        color: variables.$white;
-    }
 }
