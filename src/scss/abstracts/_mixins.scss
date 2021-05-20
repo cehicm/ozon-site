@@ -3,13 +3,21 @@
 @mixin headings-main-style {
     font-family: "Poppins", Verdana, Geneva, sans-serif;
     font-weight: 400;
-    color: variables.$black;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-decoration: overline;
 }
 
 @mixin content-main-style {
     font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
     font-weight: 200;
+}
+
+@mixin white-t-black-bg {
+    color: variables.$white;
+    background-color: variables.$black;
+}
+
+@mixin black-t-white-bg {
     color: variables.$black;
+    background-color: variables.$white;
 }

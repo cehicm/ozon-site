@@ -17,19 +17,13 @@
 @use "./layout/header";
 @use "./layout/navigation";
 @use "./layout/forms";
+@use "./layout/table";
 
 //Pages
 @use "./pages/home";
 @use "./pages/about";
 
 // Base Styles
-// .body,
-// * {
-//   box-sizing: border-box;
-//   padding: 0;
-//   margin: 0;
-//   // font-size: $font-size;
-// }
 
 /* Tablet */
 @media all and (min-width: 700px) {

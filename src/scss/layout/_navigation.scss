@@ -4,6 +4,7 @@
 nav {
     background: #222;
     padding: 0 15px;
+    margin-bottom: 30px;
 }
 
 .menu {
@@ -12,7 +13,7 @@ nav {
 
     justify-content: space-between;
     align-items: center;
-    padding: 8px 5px;
+    padding: 13px 5px;
 
     .item {
         padding: 10px;
@@ -38,6 +39,10 @@ nav {
     order: 1;
     font-size: 22px;
     margin-left: auto;
+
+    i {
+        color: variables.$white;
+    }
 }
 
 .active .item {

@@ -1,50 +1,33 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixins" as mixins;
 
-.services-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.services-table {
-    display: flex;
-    flex-direction: column;
-
-    border-collapse: collapse;
-    color: variables.$black;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-    thead {
+.about-us {
+    text-align: center;
+    margin: 20px 0;
+    &-heading {
         @include mixins.headings-main-style;
-        padding: 10px;
-        text-decoration: overline;
-        border-bottom: none;
+        @include mixins.black-t-white-bg;
+        padding: 10px 0;
     }
 
-    tr {
-        border-bottom: 1px dotted black;
-    }
-
-    td {
-        padding: 10px;
+    &-text {
         @include mixins.content-main-style;
+        @include mixins.white-t-black-bg;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        padding: 15px 0;
     }
 }
 
-.services-calc {
-    display: flex;
-    flex-direction: column;
+.review {
+    // element.style {
+    //     text-align: center;
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+    &-heading {
+    }
 
-    @include mixins.content-main-style;
-    font-size: 1rem;
-
-    max-width: 320px;
-    width: 100%;
-    margin-top: 27px;
-    padding-top: 40px;
-    align-items: center;
-    border-top: 1px solid black;
-    background-color: gainsboro;
+    &-content {
+    }
 }

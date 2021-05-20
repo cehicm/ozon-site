@@ -10,6 +10,13 @@
     color: variables.$black;
     font-size: 0.9rem;
 
+    &#calculate {
+        margin-top: 20px;
+    }
+
+    &#see-more {
+        margin-top: 10px;
+    }
     &:hover {
         transition: 1s cubic-bezier(0.47, 0, 0.75, 0.72);
         background: variables.$blue;
