@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader&family=Open+Sans:wght@300;400&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <title>Ozon</title>
+  </head>
+  <body>
+    <header>
+      <div class="flex-header">
+        <img
+          src="./src/img/download.png"
+          alt="header logo image"
+          class="header-image"
+        />
+        <div class="flex-contact-info">
+          <p>
+            <a href="tel:381037441200">037 441 200</a>
+          </p>
+          <p>
+            Đakona Avakuma 31 <br />
+            37000 Kruševac
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="nav-placeholder"></div>
+
+    <!-- <div class="slideshow-container">
+      <div class="carausel-img fade">
+        <img src="/src/img/slide1.jpg" alt="" srcset="" width="300px" />
+        <div class="carausel-text"></div>
+      </div>
+
+      <div class="carausel-img fade">
+        <img src="/src/img/slide2.jpg" alt="" srcset="" width="300px" />
+        <div class="carausel-text"></div>
+      </div>
+
+      <div class="carausel-img fade">
+        <img src="/src/img/slide3.jpg" alt="" srcset="" width="300px" />
+        <div class="carausel-text"></div>
+      </div>
+
+      <a href="" class="previous-btn"><i class="fas fa-chevron-left"></i></a>
+      <a href="" class="next-btn"><i class="fas fa-chevron-right"></i></a>
+    </div> -->
+
+    <section class="services-container">
+      <table class="services-table">
+        <thead>
+          <tr>
+            <th>Usluge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pranje tepiha i itisona</td>
+            <td>120rsd /m2</td>
+          </tr>
+          <tr>
+            <td>Pranje mebla</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <td>Pranje jorgana, jastuka i ćebadi</td>
+            <td>1200rsd /m2</td>
+          </tr>
+          <tr>
+            <td>Pranje i čišćenje poslovnog prostora</td>
+            <td>Cell</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn-primary">
+        Sve usluge
+      </button>
+
+      <div class="services-calc">
+        <h2>Kalkulator usluga</h2>
+        <form class="services-calc-form">
+          <label> Koju ste uslugu koristili? </label>
+
+          <select required class="">
+            <option disabled selected value="">izaberite uslugu</option>
+            <option value="180">Pranje tepiha</option>
+            <option value="295">Pranje i poliranje pločica</option>
+            <option value="140">Pranje tvrdih podova</option>
+          </select>
+
+          <label> kom/m<sup>2</sup> : </label>
+          <input type="text" class="calc-form-input" />
+        </form>
+
+        <button id="calculate" class="btn-primary">Izračunaj!</button>
+
+        <p>
+          Ukupan iznos:
+        </p>
+        <br />
+        <span class="result"></span>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <h2>O nama</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+        recusandae obcaecati repellat qui inventore pariatur ipsa laudantium, id
+        nulla mollitia laborum. Obcaecati quia ipsam quidem unde repudiandae,
+        nostrum hic maiores voluptatem laborum rerum sapiente excepturi aliquam
+        omnis saepe facere at placeat officia vel, tenetur totam corrupti, amet
+        quasi possimus aliquid. Dignissimos reiciendis quo ab, sint
+        necessitatibus odit earum a reprehenderit incidunt magni accusantium,
+        non, tempora quisquam labore totam temporibus debitis!
+      </p>
+    </section>
+
+    <footer></footer>
+    <!-- <script src="./src/html/nav.html"></script> -->
+    <!-- image credit: Image by Michal Jarmoluk from Pixabay 
+    Image by <a href="https://pixabay.com/users/picsbyfran-6087762/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2785074">PicsbyFran</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2785074">Pixabay</a> 
+  
+  -->
+    <!-- // do the same for the footer -->
+    <script>
+      $.get("./src/html/nav.html", function (data) {
+        $(".nav-placeholder").replaceWith(data);
+      });
+    </script>
+  </body>
+</html>
