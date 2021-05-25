@@ -8,8 +8,19 @@ th {
 
 a {
     text-decoration: none;
+    font-family: "Poppins";
 }
 
 ul {
     list-style: none;
+}
+
+.services-calc-form,
+select {
+    @include mixins.content-main-style;
+    text-align-last: center;
+}
+
+.review-content {
+    @include mixins.content-main-style;
 }

@@ -3,7 +3,7 @@
 
 .about-us {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
     &-heading {
         @include mixins.headings-main-style;
         @include mixins.black-t-white-bg;
@@ -20,14 +20,22 @@
 }
 
 .review {
-    // element.style {
-    //     text-align: center;
-    //     display: flex;
-    //     flex-direction: column;
-    // }
+    text-align: center;
+
     &-heading {
+        padding: 15px;
+        margin-bottom: 10px;
     }
 
     &-content {
+        //content mixin
+        padding: 35px 20px;
+        border-bottom: 1px solid dashed;
+        background-color: #deb887;
+
+        i {
+            color: #4a4646;
+            padding: 6px;
+        }
     }
 }

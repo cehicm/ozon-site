@@ -1,5 +1,6 @@
 @use "./variables" as variables;
 
+//font mixins
 @mixin headings-main-style {
     font-family: "Poppins", Verdana, Geneva, sans-serif;
     font-weight: 400;
@@ -12,6 +13,7 @@
     font-weight: 200;
 }
 
+// color-coding mixins
 @mixin white-t-black-bg {
     color: variables.$white;
     background-color: variables.$black;
@@ -21,3 +23,5 @@
     color: variables.$black;
     background-color: variables.$white;
 }
+
+//slide in animations

@@ -1,27 +1,33 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixins" as mixins;
 
+.services-calc {
+    @include mixins.content-main-style;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+    margin-top: 27px;
+    padding-top: 40px;
+    align-items: center;
+    background-color: #fdfdfd;
+    border: 1px solid variables.$black;
+    p {
+        padding: 15px 0;
+    }
+}
 .services-calc-form {
-    font-family: "Open Sans";
-    display: flex;
-    flex-direction: column;
     height: 177px;
     justify-content: space-evenly;
     align-items: center;
     padding: 6px 20px;
-    border: 1px solid black;
     margin-top: 10px;
 
     select {
-        font-family: "Poppins";
-        text-align: center;
-        text-align-last: center;
         cursor: pointer;
-
         padding: 5px 10px;
 
         &:invalid {
-            color: rgb(145, 145, 146);
+            color: rgb(94, 94, 94);
         }
         option {
             color: variables.$black;
@@ -38,6 +44,4 @@
         width: 70%;
         border-radius: 6px;
     }
-
-   
 }

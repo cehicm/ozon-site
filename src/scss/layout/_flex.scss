@@ -1,28 +1,23 @@
-//.services-table {
-// display: flex;
-// flex-direction: column;
+@use "../abstracts/_mixins" as mixins;
 
-// .services-container {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
+.services-container,
+.services-table,
+.services-calc,
+.services-calc-form,
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-// .services-calc {
-//     display: flex;
-//     flex-direction: column;
+.flex-header,
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-// .flex-header {
-//     display: flex;
-//     flex-direction: row;
-
-//in navigation::
-
-/* Mobile menu */
-// .menu {
-//     display: flex;
-// flex-direction: row;
-
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     align-items: center;
+.menu {
+    flex-wrap: wrap;
+    align-items: center;
+}
