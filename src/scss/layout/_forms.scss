@@ -12,7 +12,15 @@
     background-color: #fdfdfd;
     border: 1px solid variables.$black;
     p {
-        padding: 15px 0;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .result-span {
+        color: red;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        font-weight: 900;
     }
 }
 .services-calc-form {

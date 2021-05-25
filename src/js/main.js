@@ -1,12 +1,11 @@
-// make this part of nav.js and attach it to nav.html
-// then import it into main.js
-// then use main.js in index.html
-
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
 const items = document.querySelectorAll(".item");
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
+const calcBtn = document.getElementById("calculate");
 
-/* Toggle mobile menu */
+// Toggle mobile menu
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
@@ -17,7 +16,7 @@ function toggleMenu() {
   }
 }
 
-/* Activate Submenu */
+// Activate Submenu
 function toggleItem() {
   if (this.classList.contains("submenu-active")) {
     this.classList.remove("submenu-active");
@@ -29,7 +28,7 @@ function toggleItem() {
   }
 }
 
-/* Close Submenu From Anywhere */
+// Close Submenu From Anywhere
 function closeSubmenu(evt) {
   let isClickInside = menu.contains(evt.target);
 
@@ -37,7 +36,6 @@ function closeSubmenu(evt) {
     menu.querySelector(".submenu-active").classList.remove("submenu-active");
   }
 }
-/* Event Listeners */
 if (toggle) {
   toggle.addEventListener("click", toggleMenu, false);
 }
@@ -50,11 +48,10 @@ for (let item of items) {
 }
 document.addEventListener("click", closeSubmenu, false);
 
-////fader
-const faders = document.querySelectorAll(".fade-in");
+// Intersection Observers
 
 const appearOptions = {
-  threshold: 0, // so the whole section  fades in only when everything is there
+  threshold: 0,
   rootMargin: "0px 0px -250px 0px",
 };
 const appearOnScroll = new IntersectionObserver(function (
@@ -76,10 +73,19 @@ faders.forEach((fader) => {
   appearOnScroll.observe(fader);
 });
 
-const sliders = document.querySelectorAll(".slide-in");
-
 sliders.forEach((slider) => {
   appearOnScroll.observe(slider);
-
-  //may have to set the threshold to 0
 });
+
+//Calculator
+const calculateServices = () => {
+  const selectCalc = parseFloat(document.querySelector(".select-calc").value);
+  const userInput = parseFloat(
+    document.querySelector(".calc-form-input").value
+  );
+  const result = document.querySelector(".result-span");
+
+  result.innerHTML = selectCalc * userInput + "rsd";
+};
+
+calcBtn.addEventListener("click", calculateServices);

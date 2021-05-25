@@ -103,15 +103,15 @@
         <form class="services-calc-form">
           <label> Koju ste uslugu koristili? </label>
 
-          <select required class="">
-            <option disabled selected value="">izaberite uslugu</option>
+          <select required class="select-calc">
+            <!-- <option disabled selected value="">izaberite uslugu</option> -->
             <option value="180">Pranje tepiha</option>
             <option value="295">Pranje i poliranje pločica</option>
             <option value="140">Pranje tvrdih podova</option>
           </select>
 
-          <label> kom/m<sup>2</sup> : </label>
-          <input type="text" class="calc-form-input" />
+          <label> m<sup>2</sup> : </label>
+          <input type="number" class="calc-form-input" />
         </form>
 
         <button id="calculate" class="btn-primary">Izračunaj!</button>
@@ -119,8 +119,7 @@
         <p>
           Ukupan iznos:
         </p>
-        <br />
-        <span class="result"></span>
+        <span class="result-span"></span>
       </div>
     </section>
 
