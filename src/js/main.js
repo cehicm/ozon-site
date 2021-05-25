@@ -49,3 +49,37 @@ for (let item of items) {
   item.addEventListener("keypress", toggleItem, false);
 }
 document.addEventListener("click", closeSubmenu, false);
+
+////fader
+const faders = document.querySelectorAll(".fade-in");
+
+const appearOptions = {
+  threshold: 0, // so the whole section  fades in only when everything is there
+  rootMargin: "0px 0px -250px 0px",
+};
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+},
+appearOptions);
+
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
+
+const sliders = document.querySelectorAll(".slide-in");
+
+sliders.forEach((slider) => {
+  appearOnScroll.observe(slider);
+
+  //may have to set the threshold to 0
+});
