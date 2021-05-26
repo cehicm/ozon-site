@@ -29,11 +29,15 @@
   <body>
     <header>
       <div class="flex-header">
-        <img
-          src="./src/img/download.png"
-          alt="header logo image"
-          class="header-image"
-        />
+        <a href="index.html">
+          <!-- needs to be changed eventually -->
+          <img
+            src="./src/img/logo/ozon-png.png"
+            srcset="./src/img/logo/ozon-svg.svg"
+            alt="Ozon logo slika"
+            class="header-image"
+          />
+        </a>
         <div class="flex-contact-info">
           <p>
             <a href="tel:381037441200">037 441 200</a>
@@ -48,26 +52,28 @@
 
     <div class="nav-placeholder"></div>
 
-    <!-- <div class="slideshow-container">
-      <div class="carausel-img fade">
-        <img src="/src/img/slide1.jpg" alt="" srcset="" width="300px" />
-        <div class="carausel-text"></div>
+    <div class="slideshow">
+      <div class="">
+        <img src="/src/img/slide1.jpg" alt="" srcset="" />
+        <div class="carousel-text">
+          Sa vama više od 30 godina!
+        </div>
       </div>
 
-      <div class="carausel-img fade">
-        <img src="/src/img/slide2.jpg" alt="" srcset="" width="300px" />
-        <div class="carausel-text"></div>
+      <div class="">
+        <img src="/src/img/slide2.jpg" alt="" srcset="" />
+        <div class="carousel-text">
+          Preuzimanje i vraćanje na vašu adresu.
+        </div>
       </div>
 
-      <div class="carausel-img fade">
-        <img src="/src/img/slide3.jpg" alt="" srcset="" width="300px" />
-        <div class="carausel-text"></div>
+      <div class="">
+        <img src="/src/img/slide3.jpg" alt="" srcset="" />
+        <div class="carousel-text">
+          Kvalitetna usluga koju svi prepoznaju.
+        </div>
       </div>
-
-      <a href="" class="previous-btn"><i class="fas fa-chevron-left"></i></a>
-      <a href="" class="next-btn"><i class="fas fa-chevron-right"></i></a>
-    </div> -->
-
+    </div>
     <section class="services-container">
       <table class="services-table">
         <thead>
@@ -78,23 +84,42 @@
         <tbody>
           <tr>
             <td>Pranje tepiha i itisona</td>
-            <td>120rsd /m2</td>
+            <td>180 /m2</td>
           </tr>
           <tr>
-            <td>Pranje mebla</td>
-            <td>Cell</td>
+            <td>Pranje tvrdih podova</td>
+            <td>140 /m2</td>
           </tr>
           <tr>
-            <td>Pranje jorgana, jastuka i ćebadi</td>
-            <td>1200rsd /m2</td>
+            <td>Pranje jorgana i ćebadi</td>
+            <td>400-750 /kom</td>
           </tr>
           <tr>
-            <td>Pranje i čišćenje poslovnog prostora</td>
-            <td>Cell</td>
+            <td>Pranje dušeka za francuski ležaj</td>
+            <td>1400 /kom</td>
+          </tr>
+          <tr>
+            <td>Pranje i poliranje pločica</td>
+            <td>295 /m2</td>
+          </tr>
+          <tr>
+            <td>Pranje dvoseda</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>Pranje troseda</td>
+            <td>1500 /kom</td>
           </tr>
         </tbody>
       </table>
-      <button class="btn-primary" id="see-more">
+      <button
+        class="btn-primary"
+        id="see-more"
+        type="button"
+        value="Services Page"
+        onclick="window.location.href='src/html/services-table.html'"
+      >
+        <!-- change link -->
         Sve usluge
       </button>
 
@@ -163,14 +188,14 @@
 
     <section class="map-location">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.582762938672!2d21.334117515531574!3d43.573576465593774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475687f3296a992f%3A0xea91f8d4924323f5!2z0J5aT04!5e0!3m2!1sen!2srs!4v1621987297072!5m2!1sen!2srs"
-        width="400"
-        height="300"
-        style="border: 0;"
-        allowfullscreen=""
+        class="map-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.5845190416967!2d21.33418791559655!3d43.57353987912394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM0JzI0LjciTiAyMcKwMjAnMTEuMCJF!5e0!3m2!1sen!2srs!4v1622041832336!5m2!1sen!2srs"
+        allowfullscreen="false"
         loading="lazy"
       ></iframe>
     </section>
+
+    <!-- -->
 
     <footer class="footer-main">
       <p>
@@ -180,10 +205,6 @@
       <p>Radno Vreme: 09-18h</p>
     </footer>
 
-    <!-- image credit: Image by Michal Jarmoluk from Pixabay 
-    Image by <a href="https://pixabay.com/users/picsbyfran-6087762/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2785074">PicsbyFran</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2785074">Pixabay</a> 
-  
-  -->
     <script>
       $.get("./src/html/nav.html", function (data) {
         $(".nav-placeholder").replaceWith(data);

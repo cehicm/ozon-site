@@ -5,6 +5,34 @@ const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 const calcBtn = document.getElementById("calculate");
 
+// Intersection Observers
+const appearOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -250px 0px",
+};
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+},
+appearOptions);
+
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
+
+sliders.forEach((slider) => {
+  appearOnScroll.observe(slider);
+});
+
 // Toggle mobile menu
 function toggleMenu() {
   if (menu.classList.contains("active")) {
@@ -48,35 +76,6 @@ for (let item of items) {
 }
 document.addEventListener("click", closeSubmenu, false);
 
-// Intersection Observers
-
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -250px 0px",
-};
-const appearOnScroll = new IntersectionObserver(function (
-  entries,
-  appearOnScroll
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-},
-appearOptions);
-
-faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
-
-sliders.forEach((slider) => {
-  appearOnScroll.observe(slider);
-});
-
 //Calculator
 const calculateServices = () => {
   const selectCalc = parseFloat(document.querySelector(".select-calc").value);
@@ -93,3 +92,21 @@ const calculateServices = () => {
 };
 
 calcBtn.addEventListener("click", calculateServices);
+
+//slideshow
+// $(".slideshow > div:gt(0)").hide();
+
+// setInterval(function () {
+//   $(".slideshow > div:first")
+//     .fadeOut(4000)
+//     .next()
+//     .fadeIn(4000)
+//     .end()
+//     .appendTo(".slideshow");
+// }, 4000);
+
+const divs = document.querySelectorAll("div");
+
+if (divs.target.contains("jstcache")) {
+  document.style.display = "none";
+}

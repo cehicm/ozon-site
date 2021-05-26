@@ -2,13 +2,17 @@
 @use "../abstracts/mixins" as mixins;
 
 .flex-header {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
 
     background-color: variables.$white;
     column-gap: 90px;
-
     padding: 10px 0;
+    margin: 0 20px;
+
+    .header-image {
+        width: 18vw;
+    }
 }
 
 .flex-contact-info {
@@ -26,9 +30,4 @@
 }
 a:hover {
     text-decoration: underline;
-}
-.header-image {
-    width: 33vw;
-    height: 13vh;
-    object-fit: cover;
 }

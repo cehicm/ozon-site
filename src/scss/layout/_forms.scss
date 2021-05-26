@@ -1,60 +1,65 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixins" as mixins;
 
-.services-calc {
-    @include mixins.content-main-style;
-    font-size: 1rem;
-    max-width: 320px;
-    width: 100%;
-    margin-top: 27px;
-    padding-top: 40px;
-    align-items: center;
-    background-color: #fdfdfd;
-    border: 1px solid variables.$black;
-    p {
-        padding-top: 20px;
-        padding-bottom: 10px;
-    }
+.services-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
-    .result-span {
-        color: red;
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-        font-weight: 900;
-    }
-}
-.services-calc-form {
-    height: 177px;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 6px 20px;
-    margin-top: 10px;
-
-    select {
-        cursor: pointer;
-        padding: 5px 10px;
+    .services-calc {
+        @include mixins.content-main-style;
         font-size: 1rem;
+        max-width: 320px;
+        width: 100%;
+        margin-top: 27px;
+        padding-top: 40px;
+        align-items: center;
+        background-color: #fdfdfd;
+        border: 1px solid variables.$black;
 
-        &:invalid {
-            color: rgb(94, 94, 94);
+        p {
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
-        option {
-            color: variables.$black;
+
+        .result-span {
+            color: red;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 900;
         }
     }
+    .services-calc-form {
+        height: 177px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 6px 20px;
+        margin-top: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
-    label {
-        line-height: 0;
-        padding: 15px 0;
-    }
+        select {
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 1rem;
 
-    .calc-form-input {
-        padding: 5px 10px;
-        width: 70%;
-        border-radius: 6px;
+            &:invalid {
+                color: rgb(94, 94, 94);
+            }
+            option {
+                color: variables.$black;
+            }
+        }
+
+        label {
+            line-height: 0;
+            padding: 15px 0;
+        }
+
+        .calc-form-input {
+            padding: 5px 10px;
+            width: 70%;
+            border-radius: 6px;
+        }
     }
 }
-
 .alert-box {
     background-color: rgb(31, 60, 187);
 }

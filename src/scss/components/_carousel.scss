@@ -1,32 +1,71 @@
-// CARAUSEL
-.next-btn {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
 
-/* Caption text */
-.carausel-text {
+// // CARAUSEL
+// .next-btn {
+//     right: 0;
+//     border-radius: 3px 0 0 3px;
+// }
+
+// /* Caption text */
+// .carausel-text {
+//     width: 100%;
+//     color: #f2f2f2;
+//     padding: 8px 12px;
+//     position: absolute;
+//     bottom: 8px;
+//     text-align: center;
+//     p {
+//         font-size: 0.9rem;
+//     }
+// }
+
+// .fade {
+//     animation-name: fade;
+//     animation-duration: 1.5s;
+// }
+
+// @keyframes fade {
+//     from {
+//         opacity: 0.4;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+.slideshow {
+    box-sizing: content-box;
+    position: relative;
     width: 100%;
-    color: #f2f2f2;
-    padding: 8px 12px;
+    max-width: 320px;
+    height: 252px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    img {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+.slideshow > div {
     position: absolute;
-    bottom: 8px;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.carousel-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins";
+    font-weight: bolder;
+    color: white;
+    font-size: 2rem;
     text-align: center;
-    p {
-        font-size: 0.9rem;
-    }
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+    margin: 0 auto;
 }
