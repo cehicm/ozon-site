@@ -80,12 +80,16 @@ sliders.forEach((slider) => {
 //Calculator
 const calculateServices = () => {
   const selectCalc = parseFloat(document.querySelector(".select-calc").value);
-  const userInput = parseFloat(
-    document.querySelector(".calc-form-input").value
-  );
-  const result = document.querySelector(".result-span");
+  const userInput = document.querySelector(".calc-form-input").value;
+  const resultSpan = document.querySelector(".result-span");
 
-  result.innerHTML = selectCalc * userInput + "rsd";
+  if (userInput === "" || userInput == 0 || !selectCalc) {
+    resultSpan.innerHTML = "Unesite ispravnu vrednost";
+    return;
+  } else {
+    const result = document.querySelector(".result-span");
+    result.innerHTML = selectCalc * userInput + "rsd";
+  }
 };
 
 calcBtn.addEventListener("click", calculateServices);

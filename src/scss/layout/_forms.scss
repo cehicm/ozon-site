@@ -33,6 +33,7 @@
     select {
         cursor: pointer;
         padding: 5px 10px;
+        font-size: 1rem;
 
         &:invalid {
             color: rgb(94, 94, 94);
@@ -52,4 +53,8 @@
         width: 70%;
         border-radius: 6px;
     }
+}
+
+.alert-box {
+    background-color: rgb(31, 60, 187);
 }

@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.footer-main {
+    margin-top: 20px;
+    @include mixins.white-t-black-bg;
+    padding: 10px;
+}

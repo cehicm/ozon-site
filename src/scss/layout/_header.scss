@@ -16,12 +16,17 @@
     p,
     a {
         @include mixins.content-main-style;
-        font-size: 0.8rem;
+        color: variables.$black;
+        font-size: 0.9rem;
         line-height: 1;
         text-align: center;
+        padding: 1px;
+        overflow: hidden;
     }
 }
-
+a:hover {
+    text-decoration: underline;
+}
 .header-image {
     width: 33vw;
     height: 13vh;

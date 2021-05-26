@@ -16,7 +16,9 @@ ul {
 }
 
 .services-calc-form,
-select {
+select,
+.find-us,
+.footer-main {
     @include mixins.content-main-style;
     text-align-last: center;
 }
