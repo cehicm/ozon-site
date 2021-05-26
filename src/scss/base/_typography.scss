@@ -1,4 +1,5 @@
 @use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
 
 h1,
 h2,
@@ -25,4 +26,12 @@ select,
 
 .review-content {
     @include mixins.content-main-style;
+}
+
+.carousel-text {
+    font-family: "Poppins";
+    font-weight: bolder;
+    color: variables.$white;
+    font-size: 2rem;
+    text-align: center;
 }

@@ -77,14 +77,18 @@ for (let item of items) {
 document.addEventListener("click", closeSubmenu, false);
 
 //Calculator
-const calculateServices = () => {
+const calculateServices = (evt) => {
+  evt.preventDefault();
+
   const selectCalc = parseFloat(document.querySelector(".select-calc").value);
   const userInput = document.querySelector(".calc-form-input").value;
   const resultSpan = document.querySelector(".result-span");
 
-  if (userInput === "" || userInput == 0 || !selectCalc) {
+  if (userInput === "" || userInput == 0) {
     resultSpan.innerHTML = "Unesite ispravnu vrednost";
     return;
+  } else if (!selectCalc) {
+    resultSpan.innerHTML = "Odaberite uslugu";
   } else {
     const result = document.querySelector(".result-span");
     result.innerHTML = selectCalc * userInput + "rsd";
@@ -104,9 +108,3 @@ calcBtn.addEventListener("click", calculateServices);
 //     .end()
 //     .appendTo(".slideshow");
 // }, 4000);
-
-const divs = document.querySelectorAll("div");
-
-if (divs.target.contains("jstcache")) {
-  document.style.display = "none";
-}

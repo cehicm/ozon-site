@@ -50,25 +50,53 @@
       </div>
     </header>
 
-    <div class="nav-placeholder"></div>
+    <nav>
+      <ul class="menu">
+        <li class="item"><a href="#">Početna</a></li>
+        <li class="item"><a href="#">O Nama</a></li>
+        <li class="item"><a href="#">Kontakt</a></li>
 
+        <li class="item has-submenu">
+          <a tabindex="0">Usluge</a>
+          <ul class="submenu">
+            <li class="subitem"><a href="#">Pranje tepiha i itisona</a></li>
+            <li class="subitem"><a href="#">Pranje mebla</a></li>
+            <li class="subitem">
+              <a href="#">Pranje jorgana, jastuka i ćebadi</a>
+            </li>
+            <li class="subitem">
+              <a href="#">Pranje i čišćenje poslovnog prostora </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="item"><a href="#">Cenovnik</a></li>
+        <li class="item"><a href="#">Česta pitanja</a></li>
+
+        <li class="item"><a href="#">Blog</a></li>
+
+        <li class="toggle">
+          <a href="#"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+    </nav>
     <div class="slideshow">
       <div class="">
-        <img src="/src/img/slide1.jpg" alt="" srcset="" />
+        <img src="./src/img/carousel/slide1.jpg" alt="tepisi" />
         <div class="carousel-text">
           Sa vama više od 30 godina!
         </div>
       </div>
 
       <div class="">
-        <img src="/src/img/slide2.jpg" alt="" srcset="" />
+        <img src="./src/img/carousel/slide2.jpg" alt="tepih i žuti tabure" />
         <div class="carousel-text">
           Preuzimanje i vraćanje na vašu adresu.
         </div>
       </div>
 
       <div class="">
-        <img src="/src/img/slide3.jpg" alt="" srcset="" />
+        <img src="./src/img/carousel/slide3.jpg" alt="pas leži na tepihu" />
         <div class="carousel-text">
           Kvalitetna usluga koju svi prepoznaju.
         </div>
@@ -104,7 +132,7 @@
           </tr>
           <tr>
             <td>Pranje dvoseda</td>
-            <td>1000</td>
+            <td>1000 /kom</td>
           </tr>
           <tr>
             <td>Pranje troseda</td>
@@ -139,9 +167,8 @@
 
           <label> m<sup>2</sup> : </label>
           <input type="number" class="calc-form-input" />
+          <button id="calculate" class="btn-primary">Izračunaj!</button>
         </form>
-
-        <button id="calculate" class="btn-primary">Izračunaj!</button>
 
         <p>
           Ukupan iznos:
@@ -205,10 +232,6 @@
       <p>Radno Vreme: 09-18h</p>
     </footer>
 
-    <script>
-      $.get("./src/html/nav.html", function (data) {
-        $(".nav-placeholder").replaceWith(data);
-      });
-    </script>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>
