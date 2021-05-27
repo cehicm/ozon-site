@@ -2,9 +2,6 @@
 @use "../abstracts/mixins" as mixins;
 
 .flex-header {
-    // display: flex;
-    // flex-direction: row;
-
     background-color: variables.$white;
     column-gap: 90px;
     padding: 10px 0;
@@ -12,6 +9,14 @@
 
     .header-image {
         width: 18vw;
+    }
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.3rem;
+
+        .header-image {
+            width: 20vw;
+        }
     }
 }
 
@@ -26,6 +31,9 @@
         text-align: center;
         padding: 1px;
         overflow: hidden;
+        @include mixins.breakpoint(phablet) {
+            font-size: 1.3rem;
+        }
     }
 }
 a:hover {

@@ -28,7 +28,7 @@
     }
 
     &-content {
-        //content mixin
+        width: 100%;
         padding: 35px 20px;
         border-bottom: 1px solid dashed;
         background-color: #deb887;
@@ -47,7 +47,7 @@
     overflow: scroll;
 
     .map-iframe {
-        width: 400px;
+        width: 320px;
         height: 400px;
         border: 0;
     }

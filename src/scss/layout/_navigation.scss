@@ -26,15 +26,69 @@ nav {
             }
         }
     }
-}
+    .toggle {
+        order: 1;
+        font-size: 1.38rem;
+        margin-left: auto;
 
-.toggle {
-    order: 1;
-    font-size: 1.38rem;
-    margin-left: auto;
+        i {
+            color: variables.$white;
+        }
+    }
 
-    i {
-        color: variables.$white;
+    //Tablet Responsive
+    @include mixins.breakpoint(phablet) {
+        body {
+            background-color: rgb(199, 147, 147);
+        }
+        .menu {
+            justify-content: center;
+        }
+
+        .toggle {
+            text-align: right;
+            order: 2;
+        }
+    }
+
+    //Desktop Responsive
+    @include mixins.breakpoint(desktop) {
+        .menu {
+            background: none;
+        }
+
+        .item {
+            order: 1;
+            position: relative;
+            display: block;
+            width: auto;
+        }
+        .toggle {
+            display: none;
+        }
+        .submenu-active {
+            border-radius: 0;
+        }
+        .submenu-active .submenu {
+            border-left: inset;
+            background: #111;
+            display: block;
+            left: 0;
+            position: absolute;
+            top: 74px;
+            z-index: 1;
+            width: 294px;
+            /* text-align: left; */
+            text-align-last: left;
+        }
+
+        .submenu-active {
+            border-radius: 0;
+        }
+
+        .toggle {
+            display: none;
+        }
     }
 }
 
@@ -45,7 +99,7 @@ nav {
 
 .menu li.subitem a {
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 .submenu {
