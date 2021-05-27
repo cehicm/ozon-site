@@ -5,8 +5,6 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     .services-calc {
-        @include mixins.content-main-style;
-        font-size: 1rem;
         max-width: 320px;
         width: 100%;
         margin-top: 27px;
@@ -21,15 +19,14 @@
         }
 
         .result-span {
-            color: red;
-            font-size: 1.1rem;
+            color: rgb(243, 10, 10);
             margin-bottom: 10px;
-            font-weight: 900;
         }
     }
+
     .services-calc-form {
-        height: 220px;
-        justify-content: space-evenly;
+        height: 250px;
+        justify-content: center;
         align-items: center;
         padding: 6px 20px;
         margin-top: 10px;
@@ -38,19 +35,13 @@
         select {
             cursor: pointer;
             padding: 5px 10px;
-            font-size: 1rem;
-
+            margin-bottom: 20px;
             &:invalid {
                 color: rgb(94, 94, 94);
             }
             option {
                 color: variables.$black;
             }
-        }
-
-        label {
-            line-height: 0;
-            padding: 15px 0;
         }
 
         .calc-form-input {
@@ -60,6 +51,31 @@
         }
     }
 }
-.alert-box {
-    background-color: rgb(31, 60, 187);
+
+@include mixins.breakpoint(phablet) {
+    .services-container .services-calc {
+        height: 500px;
+        max-width: 450px;
+    }
+
+    .services-calc-form {
+        height: 490px;
+        width: 330px;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+}
+
+/// FIX EVERYTHING!!!
+@include mixins.breakpoint(tablet) {
+    @include mixins.breakpoint(tablet) {
+        .services-container .services-calc {
+            height: 500px;
+            max-width: 720px;
+        }
+
+        .services-calc-form {
+            height: 300px;
+        }
+    }
 }

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="sr">
   <head>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Newsreader&family=Open+Sans:wght@300;400&family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <!-- Fonts -->
+
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link
@@ -14,16 +18,17 @@
       integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
-      rel="stylesheet"
-    /> -->
+    <link rel="stylesheet" href="/dist/style.css" />
+
+    <!-- Scripts -->
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/dist/style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+
     <title>Ozon</title>
   </head>
   <body>
@@ -80,148 +85,153 @@
         </li>
       </ul>
     </nav>
-    <div class="slideshow">
-      <div class="">
-        <img src="./src/img/carousel/slide1.jpg" alt="tepisi" />
-        <div class="carousel-text">
-          Sa vama više od 30 godina!
+
+    <div class="container">
+      <div class="carousel">
+        <div class="carousel-slide">
+          <img src="./src/img/carousel/slide1.jpg" alt="tepisi" />
+          <div class="carousel-text">
+            Sa vama više od 30 godina!
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./src/img/carousel/slide2.jpg" alt="tepih i žuti tabure" />
+          <div class="carousel-text">
+            Preuzimanje i vraćanje na vašu adresu.
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./src/img/carousel/slide3.jpg" alt="pas leži na tepihu" />
+          <div class="carousel-text">
+            Kvalitetna usluga koju svi prepoznaju.
+          </div>
         </div>
       </div>
+      <section class="services-container">
+        <table class="services-table">
+          <thead>
+            <tr>
+              <th>Usluge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pranje tepiha i itisona</td>
+              <td>180 /m2</td>
+            </tr>
+            <tr>
+              <td>Pranje tvrdih podova</td>
+              <td>140 /m2</td>
+            </tr>
+            <tr>
+              <td>Pranje jorgana i ćebadi</td>
+              <td>400-750 /kom</td>
+            </tr>
+            <tr>
+              <td>Pranje dušeka za francuski ležaj</td>
+              <td>1400 /kom</td>
+            </tr>
+            <tr>
+              <td>Pranje i poliranje pločica</td>
+              <td>295 /m2</td>
+            </tr>
+            <tr>
+              <td>Pranje dvoseda</td>
+              <td>1000 /kom</td>
+            </tr>
+            <tr>
+              <td>Pranje troseda</td>
+              <td>1500 /kom</td>
+            </tr>
+          </tbody>
+        </table>
+        <button
+          class="btn-primary"
+          id="see-more"
+          type="button"
+          value="Services Page"
+          onclick="window.location.href='src/html/services-table.html'"
+        >
+          <!-- change link -->
+          Sve usluge
+        </button>
 
-      <div class="">
-        <img src="./src/img/carousel/slide2.jpg" alt="tepih i žuti tabure" />
-        <div class="carousel-text">
-          Preuzimanje i vraćanje na vašu adresu.
+        <div class="services-calc slide-in from-left">
+          <h2>Kalkulator usluga</h2>
+          <form class="services-calc-form">
+            <label> Koju ste uslugu koristili? </label>
+
+            <select
+              required
+              class="select-calc"
+              aria-placeholder="Izaberite uslugu"
+            >
+              <option disabled selected value=""
+                >&mdash; izaberite uslugu &mdash;
+              </option>
+              <option value="180">Pranje tepiha</option>
+              <option value="295">Pranje i poliranje pločica</option>
+              <option value="140">Pranje tvrdih podova</option>
+            </select>
+
+            <label> m<sup>2</sup> : </label>
+            <input type="number" class="calc-form-input" />
+            <button id="calculate" class="btn-primary">Izračunaj!</button>
+          </form>
+
+          <p>
+            Ukupan iznos:
+          </p>
+          <span class="result-span"></span>
         </div>
-      </div>
+      </section>
 
-      <div class="">
-        <img src="./src/img/carousel/slide3.jpg" alt="pas leži na tepihu" />
-        <div class="carousel-text">
-          Kvalitetna usluga koju svi prepoznaju.
-        </div>
-      </div>
-    </div>
-    <section class="services-container">
-      <table class="services-table">
-        <thead>
-          <tr>
-            <th>Usluge</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pranje tepiha i itisona</td>
-            <td>180 /m2</td>
-          </tr>
-          <tr>
-            <td>Pranje tvrdih podova</td>
-            <td>140 /m2</td>
-          </tr>
-          <tr>
-            <td>Pranje jorgana i ćebadi</td>
-            <td>400-750 /kom</td>
-          </tr>
-          <tr>
-            <td>Pranje dušeka za francuski ležaj</td>
-            <td>1400 /kom</td>
-          </tr>
-          <tr>
-            <td>Pranje i poliranje pločica</td>
-            <td>295 /m2</td>
-          </tr>
-          <tr>
-            <td>Pranje dvoseda</td>
-            <td>1000 /kom</td>
-          </tr>
-          <tr>
-            <td>Pranje troseda</td>
-            <td>1500 /kom</td>
-          </tr>
-        </tbody>
-      </table>
-      <button
-        class="btn-primary"
-        id="see-more"
-        type="button"
-        value="Services Page"
-        onclick="window.location.href='src/html/services-table.html'"
-      >
-        <!-- change link -->
-        Sve usluge
-      </button>
-
-      <div class="services-calc slide-in from-left">
-        <h2>Kalkulator usluga</h2>
-        <form class="services-calc-form">
-          <label> Koju ste uslugu koristili? </label>
-
-          <select required class="select-calc">
-            <option disabled selected value=""
-              >&mdash; izaberite uslugu &mdash;
-            </option>
-            <option value="180">Pranje tepiha</option>
-            <option value="295">Pranje i poliranje pločica</option>
-            <option value="140">Pranje tvrdih podova</option>
-          </select>
-
-          <label> m<sup>2</sup> : </label>
-          <input type="number" class="calc-form-input" />
-          <button id="calculate" class="btn-primary">Izračunaj!</button>
-        </form>
-
-        <p>
-          Ukupan iznos:
+      <section class="about-us">
+        <h2 class="about-us-heading">O nama</h2>
+        <p class="about-us-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+          recusandae obcaecati repellat qui inventore pariatur ipsa laudantium,
+          id nulla mollitia laborum. Obcaecati quia ipsam quidem unde
+          repudiandae, nostrum hic maiores voluptatem laborum rerum sapiente
+          excepturi aliquam omnis saepe facere at placeat officia vel, tenetur
+          totam corrupti, amet quasi possimus aliquid. Dignissimos reiciendis
+          quo ab, sint necessitatibus odit earum a reprehenderit incidunt magni
+          accusantium, non, tempora quisquam labore totam temporibus debitis!
         </p>
-        <span class="result-span"></span>
-      </div>
-    </section>
+      </section>
+      <article class="review slide-in from-right">
+        <h1 class="review-heading">
+          Šta drugi kažu o nama
+        </h1>
+        <p class="review-content">
+          <i class="fas fa-quote-left"></i> Vrhunska usluga!! Tačni i
+          profesionalni. S.S
+          <i class="fas fa-quote-right"></i>
+        </p>
 
-    <section class="about-us">
-      <h2 class="about-us-heading">O nama</h2>
-      <p class="about-us-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-        recusandae obcaecati repellat qui inventore pariatur ipsa laudantium, id
-        nulla mollitia laborum. Obcaecati quia ipsam quidem unde repudiandae,
-        nostrum hic maiores voluptatem laborum rerum sapiente excepturi aliquam
-        omnis saepe facere at placeat officia vel, tenetur totam corrupti, amet
-        quasi possimus aliquid. Dignissimos reiciendis quo ab, sint
-        necessitatibus odit earum a reprehenderit incidunt magni accusantium,
-        non, tempora quisquam labore totam temporibus debitis!
-      </p>
-    </section>
-    <!-- plus neka flex klasa -->
-    <article class="review slide-in from-right">
-      <h1 class="review-heading">
-        Šta drugi kažu o nama
-      </h1>
-      <p class="review-content">
-        <i class="fas fa-quote-left"></i> Vrhunska usluga!! Tačni i
-        profesionalni. S.S
-        <i class="fas fa-quote-right"></i>
-      </p>
+        <p class="review-content">
+          <i class="fas fa-quote-left"></i>
+          Sve pohvale, brzo, kvalitetno. I.L.
+          <i class="fas fa-quote-right"></i>
+        </p>
 
-      <p class="review-content">
-        <i class="fas fa-quote-left"></i>
-        Sve pohvale, brzo, kvalitetno. I.L.
-        <i class="fas fa-quote-right"></i>
-      </p>
+        <p class="review-content">
+          <i class="fas fa-quote-left"></i> Brzi korektni,laki za dogovor. D.M.
+          <i class="fas fa-quote-right"></i>
+        </p>
+      </article>
 
-      <p class="review-content">
-        <i class="fas fa-quote-left"></i> Brzi korektni,laki za dogovor. D.M.
-        <i class="fas fa-quote-right"></i>
-      </p>
-    </article>
-
-    <section class="map-location">
-      <iframe
-        class="map-iframe"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.5845190416967!2d21.33418791559655!3d43.57353987912394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM0JzI0LjciTiAyMcKwMjAnMTEuMCJF!5e0!3m2!1sen!2srs!4v1622041832336!5m2!1sen!2srs"
-        allowfullscreen="false"
-        loading="lazy"
-      ></iframe>
-    </section>
-
+      <section class="map-location">
+        <iframe
+          class="map-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.5845190416967!2d21.33418791559655!3d43.57353987912394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM0JzI0LjciTiAyMcKwMjAnMTEuMCJF!5e0!3m2!1sen!2srs!4v1622041832336!5m2!1sen!2srs"
+          allowfullscreen="false"
+          loading="lazy"
+        ></iframe>
+      </section>
+    </div>
     <!-- -->
 
     <footer class="footer-main">

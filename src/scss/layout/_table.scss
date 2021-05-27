@@ -8,7 +8,6 @@
     width: 100%;
     margin-bottom: 20px;
     thead {
-        @include mixins.headings-main-style;
         padding: 10px;
         text-decoration: overline;
         border-bottom: none;
@@ -20,6 +19,5 @@
 
     td {
         padding: 10px;
-        @include mixins.content-main-style;
     }
 }

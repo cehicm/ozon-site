@@ -1,12 +1,6 @@
 @use "../abstracts/mixins" as mixins;
 @use "../abstracts/variables" as variables;
 
-h1,
-h2,
-th {
-    @include mixins.headings-main-style;
-}
-
 a {
     text-decoration: none;
     font-family: "Poppins";
@@ -16,16 +10,71 @@ ul {
     list-style: none;
 }
 
+h1,
+h2,
+thead {
+    @include mixins.headings-main-style;
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 2rem;
+    }
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 2.3rem;
+    }
+}
+
+.services-calc,
 .services-calc-form,
 select,
 .find-us,
-.footer-main {
+.footer-main,
+.about-us-text {
     @include mixins.content-main-style;
     text-align-last: center;
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.2rem;
+    }
 }
 
-.review-content {
+.services-table {
     @include mixins.content-main-style;
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.3rem;
+    }
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 2rem;
+    }
+}
+//Form Type Styles
+.services-calc-form {
+    .result-span {
+        font-size: 1.1rem;
+        font-weight: 900;
+    }
+
+    @include mixins.breakpoint(phablet) {
+        select {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+        option,
+        &:disabled {
+            font-size: 0.9rem;
+        }
+
+        label {
+            line-height: 0;
+            font-size: 1.4rem;
+        }
+
+        input {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .carousel-text {
@@ -34,4 +83,42 @@ select,
     color: variables.$white;
     font-size: 2rem;
     text-align: center;
+}
+
+.about-us {
+    text-align: center;
+
+    &-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        @include mixins.breakpoint(phablet) {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.review-content {
+    @include mixins.content-main-style;
+    font-size: 0.9rem;
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+
+.btn-primary {
+    font-family: "Poppins";
+
+    font-size: 0.9rem;
+    color: variables.$black;
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.1rem;
+    }
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.5rem;
+    }
 }

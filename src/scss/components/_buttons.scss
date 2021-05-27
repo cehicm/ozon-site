@@ -1,4 +1,6 @@
-@use "./abstracts/_variables" as variables;
+@use "./abstracts/_variables"
+ as variables;
+@use "./abstracts/mixins" as mixins;
 
 .btn-primary {
     padding: 10px 15px;
@@ -7,8 +9,6 @@
     border: 1px solid #919191;
     border-radius: 8px;
     background-color: variables.$white;
-    color: variables.$black;
-    font-size: 0.9rem;
 
     &#calculate {
         margin-top: 20px;
@@ -18,8 +18,14 @@
         margin-top: 10px;
     }
     &:hover {
-        transition: 1s cubic-bezier(0.47, 0, 0.75, 0.72);
+        transition: 0.5s cubic-bezier(0.47, 0, 0.75, 0.72);
         background: variables.$blue;
         color: variables.$white;
+    }
+}
+
+@include mixins.breakpoint(phablet) {
+    .btn-primary {
+        padding: 15px 20px;
     }
 }
