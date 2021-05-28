@@ -2,19 +2,19 @@
 @use "../abstracts/mixins" as mixins;
 
 .flex-header {
-    background-color: variables.$white;
+    background-color: #cddeef;
     column-gap: 70px;
     padding: 10px 0;
 
     .header-image {
-        width: 18vw;
+        width: 13vw;
     }
 
     @include mixins.breakpoint(phablet) {
         font-size: 1.3rem;
 
         .header-image {
-            width: 20vw;
+            width: 15vw;
         }
     }
 }
@@ -25,14 +25,8 @@
     a {
         @include mixins.content-main-style;
         color: variables.$black;
-        font-size: 0.9rem;
-        line-height: 1;
-        text-align: center;
         padding: 1px;
         overflow: hidden;
-        @include mixins.breakpoint(phablet) {
-            font-size: 1.3rem;
-        }
     }
 }
 a:hover {

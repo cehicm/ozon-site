@@ -5,4 +5,8 @@
     margin-top: 20px;
     @include mixins.white-t-black-bg;
     padding: 10px;
+
+    @include mixins.breakpoint(tablet) {
+        height: 120px;
+    }
 }

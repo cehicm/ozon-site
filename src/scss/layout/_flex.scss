@@ -8,9 +8,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
+.services-calc-form {
+    @include mixins.breakpoint(phablet) {
+        justify-content: space-evenly;
+    }
+}
 .flex-header,
 .menu {
     display: flex;

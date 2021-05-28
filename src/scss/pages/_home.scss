@@ -6,15 +6,23 @@
     &-heading {
         @include mixins.black-t-white-bg;
         padding: 10px 0;
+        @include mixins.breakpoint(tablet) {
+            padding: 20px 0;
+        }
+        padding: 20px 0;
     }
 
     &-text {
         @include mixins.white-t-black-bg;
         padding: 15px 0;
-
         @include mixins.breakpoint(phablet) {
             height: 380px;
             padding: 35px;
+        }
+
+        @include mixins.breakpoint(tablet) {
+            height: 400px;
+            padding: 30px;
         }
     }
 }
@@ -33,6 +41,16 @@
         border-bottom: 1px solid dashed;
         background-color: #deb887;
 
+        @include mixins.breakpoint(phablet) {
+            padding: 47px 20px;
+            height: 130px;
+        }
+
+        @include mixins.breakpoint(tablet) {
+            height: 150px;
+            padding: 62px;
+        }
+
         i {
             color: #4a4646;
             padding: 6px;
@@ -44,17 +62,24 @@
     height: 300px;
     margin-top: 30px;
     overflow: scroll;
+    @include mixins.breakpoint(phablet) {
+        height: inherit;
+        overflow: hidden;
+    }
 
     .map-iframe {
         width: 320px;
         height: 400px;
         border: 0;
-    }
-    @include mixins.breakpoint(phablet) {
-        .map-iframe {
+
+        @include mixins.breakpoint(phablet) {
             height: 400px;
             overflow: hidden;
             width: 580px;
+
+            @include mixins.breakpoint(tablet) {
+                width: 800px;
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ h1,
 h2,
 thead {
     @include mixins.headings-main-style;
-
+    padding: 35px;
     @include mixins.breakpoint(phablet) {
         font-size: 2rem;
     }
@@ -24,24 +24,55 @@ thead {
     }
 }
 
-.services-calc,
 .services-calc-form,
-select,
+.select-calc,
 .find-us,
 .footer-main,
 .about-us-text {
     @include mixins.content-main-style;
     text-align-last: center;
+}
 
-    @include mixins.breakpoint(phablet) {
-        font-size: 1.2rem;
+.flex-contact-info {
+    p,
+    a {
+        font-size: 0.9rem;
+        line-height: 1;
+        text-align: center;
+
+        @include mixins.breakpoint(phablet) {
+            font-size: 1.5rem;
+        }
     }
 }
 
+.item {
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.5rem;
+    }
+}
+
+.toggle i {
+    @include mixins.breakpoint(tablet) {
+        font-size: 2rem;
+    }
+}
+
+.services-calc {
+    @include mixins.content-main-style;
+    text-align-last: center;
+    p {
+        font-size: 1.2rem;
+        font-weight: 900;
+        @include mixins.breakpoint(tablet) {
+            font-size: 1.4rem;
+        }
+    }
+}
 .services-table {
     @include mixins.content-main-style;
     @include mixins.breakpoint(phablet) {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     @include mixins.breakpoint(tablet) {
@@ -49,31 +80,41 @@ select,
     }
 }
 //Form Type Styles
-.services-calc-form {
-    .result-span {
-        font-size: 1.1rem;
-        font-weight: 900;
-    }
 
-    @include mixins.breakpoint(phablet) {
-        select {
-            font-size: 1.3rem;
+.services-calc-form {
+    .select-calc,
+    .select-calc:invalid {
+        font-size: 0.9rem;
+
+        @include mixins.breakpoint(phablet) {
+            font-size: 1rem;
+        }
+
+        @include mixins.breakpoint(tablet) {
+            font-size: 1.4rem;
             font-weight: 400;
         }
 
-        option,
-        &:disabled {
+        option {
             font-size: 0.9rem;
         }
+    }
 
-        label {
-            line-height: 0;
-            font-size: 1.4rem;
-        }
+    label {
+        line-height: 0;
+        font-size: 1.4rem;
 
-        input {
-            font-size: 1.2rem;
+        @include mixins.breakpoint(phablet) {
+            font-size: 1.3rem;
+            font-weight: 400;
         }
+        @include mixins.breakpoint(tablet) {
+            font-size: 1.6rem;
+        }
+    }
+
+    input {
+        font-size: 1.2rem;
     }
 }
 
@@ -83,6 +124,10 @@ select,
     color: variables.$white;
     font-size: 2rem;
     text-align: center;
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 2.5rem;
+    }
 }
 
 .about-us {
@@ -95,6 +140,10 @@ select,
         @include mixins.breakpoint(phablet) {
             font-size: 1.3rem;
         }
+
+        @include mixins.breakpoint(tablet) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -106,12 +155,14 @@ select,
         font-size: 1.2rem;
         font-weight: 400;
     }
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.6rem;
+    }
 }
 
 .btn-primary {
     font-family: "Poppins";
 
-    font-size: 0.9rem;
     color: variables.$black;
 
     @include mixins.breakpoint(phablet) {
@@ -120,5 +171,15 @@ select,
 
     @include mixins.breakpoint(tablet) {
         font-size: 1.5rem;
+    }
+}
+
+.footer-main {
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.1rem;
+    }
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.4rem;
     }
 }

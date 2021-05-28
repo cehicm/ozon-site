@@ -5,13 +5,29 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     .services-calc {
-        max-width: 320px;
-        width: 100%;
+        width: 320px;
         margin-top: 27px;
         padding-top: 40px;
         align-items: center;
         background-color: #fdfdfd;
         border: 1px solid variables.$black;
+
+        @include mixins.breakpoint(phablet) {
+            height: 580px;
+            width: 500px;
+            justify-content: space-evenly;
+            padding: 5px;
+
+            h2 {
+                padding: 35px;
+                margin-top: 15px;
+            }
+        }
+
+        @include mixins.breakpoint(tablet) {
+            width: 700px;
+            height: 800px;
+        }
 
         p {
             padding-top: 20px;
@@ -23,59 +39,53 @@
             margin-bottom: 10px;
         }
     }
-
-    .services-calc-form {
-        height: 250px;
-        justify-content: center;
-        align-items: center;
-        padding: 6px 20px;
-        margin-top: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-
-        select {
-            cursor: pointer;
-            padding: 5px 10px;
-            margin-bottom: 20px;
-            &:invalid {
-                color: rgb(94, 94, 94);
-            }
-            option {
-                color: variables.$black;
-            }
-        }
-
-        .calc-form-input {
-            padding: 5px 10px;
-            width: 70%;
-            border-radius: 6px;
-        }
-    }
 }
 
-@include mixins.breakpoint(phablet) {
-    .services-container .services-calc {
+.services-calc-form {
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 20px;
+    margin-top: 10px;
+    background-color: #cddeef;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    @include mixins.breakpoint(phablet) {
         height: 500px;
-        max-width: 450px;
     }
 
-    .services-calc-form {
-        height: 490px;
-        width: 330px;
-        justify-content: space-evenly;
-        padding: 5px;
-    }
-}
-
-/// FIX EVERYTHING!!!
-@include mixins.breakpoint(tablet) {
     @include mixins.breakpoint(tablet) {
-        .services-container .services-calc {
-            height: 500px;
-            max-width: 720px;
+        width: 450px;
+        padding: 30px;
+    }
+
+    .select-calc {
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        &:invalid {
+            color: rgb(94, 94, 94);
         }
 
-        .services-calc-form {
-            height: 300px;
+        @include mixins.breakpoint(phablet) {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        option {
+            color: variables.$black;
+        }
+    }
+
+    .calc-form-input {
+        padding: 5px 10px;
+        width: 70%;
+        border-radius: 6px;
+
+        @include mixins.breakpoint(tablet) {
+            padding: 10px;
+            margin-top: 20px;
+            width: 150px;
         }
     }
 }

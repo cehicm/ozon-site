@@ -16,6 +16,9 @@
 
     &#see-more {
         margin-top: 10px;
+        @include mixins.breakpoint(phablet) {
+            margin: 25px;
+        }
     }
     &:hover {
         transition: 0.5s cubic-bezier(0.47, 0, 0.75, 0.72);
