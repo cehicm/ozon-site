@@ -32,3 +32,9 @@
         padding: 15px 20px;
     }
 }
+
+@include mixins.breakpoint(tablet) {
+    .btn-primary {
+        padding: 20px 25px;
+    }
+}

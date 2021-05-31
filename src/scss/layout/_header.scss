@@ -11,7 +11,7 @@
     }
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.3rem;
+        padding: 10px 30px;
 
         .header-image {
             width: 15vw;
@@ -28,7 +28,4 @@
         padding: 1px;
         overflow: hidden;
     }
-}
-a:hover {
-    text-decoration: underline;
 }

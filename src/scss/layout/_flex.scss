@@ -13,20 +13,13 @@
 }
 
 .services-calc-form {
-    @include mixins.breakpoint(phablet) {
-        justify-content: space-evenly;
-    }
+    justify-content: space-evenly;
 }
 .flex-header,
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @include mixins.breakpoint(phablet) {
-        .flex-header {
-            padding: 10px 30px;
-        }
-    }
 }
 
 .menu {

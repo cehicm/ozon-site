@@ -16,13 +16,12 @@
         @include mixins.white-t-black-bg;
         padding: 15px 0;
         @include mixins.breakpoint(phablet) {
-            height: 380px;
             padding: 35px;
         }
 
         @include mixins.breakpoint(tablet) {
-            height: 400px;
-            padding: 30px;
+            height: 51vh;
+            padding-top: 110px;
         }
     }
 }
@@ -43,12 +42,11 @@
 
         @include mixins.breakpoint(phablet) {
             padding: 47px 20px;
-            height: 130px;
+            height: 17vh;
         }
 
         @include mixins.breakpoint(tablet) {
-            height: 150px;
-            padding: 62px;
+            padding: 80px 20px;
         }
 
         i {
@@ -59,7 +57,7 @@
 }
 
 .map-location {
-    height: 300px;
+    height: 38vh;
     margin-top: 30px;
     overflow: scroll;
     @include mixins.breakpoint(phablet) {
@@ -68,18 +66,17 @@
     }
 
     .map-iframe {
-        width: 320px;
-        height: 400px;
+        height: 51vh;
+        width: 100%;
         border: 0;
 
         @include mixins.breakpoint(phablet) {
-            height: 400px;
             overflow: hidden;
-            width: 580px;
+            width: 190vw;
 
-            @include mixins.breakpoint(tablet) {
-                width: 800px;
-            }
+            // @include mixins.breakpoint(tablet) {
+            //     width: 105vw;
+            // }
         }
     }
 }

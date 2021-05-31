@@ -5,16 +5,15 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     .services-calc {
-        width: 320px;
+        width: 100%;
         margin-top: 27px;
-        padding-top: 40px;
         align-items: center;
         background-color: #fdfdfd;
         border: 1px solid variables.$black;
 
         @include mixins.breakpoint(phablet) {
-            height: 580px;
-            width: 500px;
+            height: 74vh;
+            width: 80vw;
             justify-content: space-evenly;
             padding: 5px;
 
@@ -25,37 +24,31 @@
         }
 
         @include mixins.breakpoint(tablet) {
-            width: 700px;
-            height: 800px;
-        }
-
-        p {
-            padding-top: 20px;
-            padding-bottom: 10px;
+            width: 92vw;
         }
 
         .result-span {
-            color: rgb(243, 10, 10);
-            margin-bottom: 10px;
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
     }
 }
 
 .services-calc-form {
-    height: 250px;
-    justify-content: center;
-    align-items: center;
+    height: 43vh;
+    // width: 33wv;
     padding: 6px 20px;
     margin-top: 10px;
     background-color: #cddeef;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     @include mixins.breakpoint(phablet) {
-        height: 500px;
+        height: 53vh;
+        width: 46vh;
     }
 
     @include mixins.breakpoint(tablet) {
-        width: 450px;
+        width: 64vw;
         padding: 30px;
     }
 
@@ -78,14 +71,14 @@
     }
 
     .calc-form-input {
+        width: 25vw;
         padding: 5px 10px;
-        width: 70%;
         border-radius: 6px;
 
         @include mixins.breakpoint(tablet) {
+            margin-top: -27px;
             padding: 10px;
-            margin-top: 20px;
-            width: 150px;
+            width: 20vw;
         }
     }
 }
