@@ -16,7 +16,9 @@ ul {
 
 h1,
 h2,
-thead {
+thead,
+th {
+    font-weight: 100;
     @include mixins.headings-main-style;
     padding: 35px;
     @include mixins.breakpoint(phablet) {
@@ -68,7 +70,7 @@ thead {
 }
 
 .toggle i {
-    @include mixins.breakpoint(tablet) {
+    @include mixins.breakpoint(phablet) {
         font-size: 2rem;
     }
 
@@ -116,6 +118,10 @@ thead {
     @include mixins.breakpoint(tablet) {
         font-size: 2rem;
     }
+
+    @include mixins.breakpoint(laptop) {
+        font-size: 1.3rem;
+    }
 }
 //Form  Styles
 .services-calc-form {
@@ -144,6 +150,7 @@ thead {
             font-weight: 400;
         }
         @include mixins.breakpoint(tablet) {
+            font-size: 1.4rem;
         }
     }
 
@@ -192,7 +199,7 @@ thead {
     }
 
     @include mixins.breakpoint(tablet) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 

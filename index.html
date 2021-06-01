@@ -7,7 +7,6 @@
       href="https://fonts.googleapis.com/css2?family=Newsreader&family=Open+Sans:wght@300;400&family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <!-- Fonts -->
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,7 +20,6 @@
     <link rel="stylesheet" href="/dist/style.css" />
 
     <!-- Scripts -->
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -74,16 +72,13 @@
             </li>
           </ul>
         </li>
-
         <li class="item"><a href="#">Cenovnik</a></li>
         <li class="item"><a href="#">Česta pitanja</a></li>
 
         <li class="item"><a href="#">Galerija</a></li>
 
-        <li class="item"><a href="#">Blog</a></li>
-
         <li class="toggle">
-          <a href="#"><i class="fas fa-bars"></i></a>
+          <a href="#"><i class="fas fa-bars"> </i></a>
         </li>
       </ul>
     </nav>
@@ -112,55 +107,57 @@
         </div>
       </div>
       <section class="services-container">
-        <table class="services-table">
-          <thead>
-            <tr>
-              <th>Usluge</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Pranje tepiha i itisona</td>
-              <td>180 /m2</td>
-            </tr>
-            <tr>
-              <td>Pranje tvrdih podova</td>
-              <td>140 /m2</td>
-            </tr>
-            <tr>
-              <td>Pranje jorgana i ćebadi</td>
-              <td>400-750 /kom</td>
-            </tr>
-            <tr>
-              <td>Pranje dušeka za francuski ležaj</td>
-              <td>1400 /kom</td>
-            </tr>
-            <tr>
-              <td>Pranje i poliranje pločica</td>
-              <td>295 /m2</td>
-            </tr>
-            <tr>
-              <td>Pranje dvoseda</td>
-              <td>1000 /kom</td>
-            </tr>
-            <tr>
-              <td>Pranje troseda</td>
-              <td>1500 /kom</td>
-            </tr>
-          </tbody>
-        </table>
-        <button
-          class="btn-primary"
-          id="see-more"
-          type="button"
-          value="Services Page"
-          onclick="window.location.href='src/html/services-table.html'"
-        >
-          <!-- change link -->
-          Sve usluge
-        </button>
+        <div class="flex-table slide-in from-left">
+          <table class="services-table">
+            <thead>
+              <tr>
+                <th>Usluge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pranje tepiha i itisona</td>
+                <td>180 /m2</td>
+              </tr>
+              <tr>
+                <td>Pranje tvrdih podova</td>
+                <td>140 /m2</td>
+              </tr>
+              <tr>
+                <td>Pranje jorgana i ćebadi</td>
+                <td>400-750 /kom</td>
+              </tr>
+              <tr>
+                <td>Pranje dušeka za francuski ležaj</td>
+                <td>1400 /kom</td>
+              </tr>
+              <tr>
+                <td>Pranje i poliranje pločica</td>
+                <td>295 /m2</td>
+              </tr>
+              <tr>
+                <td>Pranje dvoseda</td>
+                <td>1000 /kom</td>
+              </tr>
+              <tr>
+                <td>Pranje troseda</td>
+                <td>1500 /kom</td>
+              </tr>
+            </tbody>
+          </table>
+          <button
+            class="btn-primary"
+            id="see-more"
+            type="button"
+            value="Services Page"
+            onclick="window.location.href='src/html/services-table.html'"
+          >
+            <!-- change link -->
+            Sve usluge
+          </button>
+        </div>
 
-        <div class="services-calc slide-in from-left">
+        <div class="services-calc slide-in from-right">
           <h2>Kalkulator usluga</h2>
           <form class="services-calc-form">
             <label> Koju ste uslugu koristili? </label>
@@ -193,57 +190,62 @@
       <section class="about-us">
         <h2 class="about-us-heading">O nama</h2>
         <p class="about-us-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-          recusandae obcaecati repellat qui inventore pariatur ipsa laudantium,
-          id nulla mollitia laborum. Obcaecati quia ipsam quidem unde
-          repudiandae, nostrum hic maiores voluptatem laborum rerum sapiente
-          excepturi aliquam omnis saepe facere at placeat officia vel, tenetur
-          totam corrupti, amet quasi possimus aliquid. Dignissimos reiciendis
-          quo ab, sint necessitatibus odit earum a reprehenderit incidunt magni
-          accusantium, non, tempora quisquam labore totam temporibus debitis!
+          Ozon je osnovan 1991. godine u Kruševcu i od tada je jedna od
+          najpoznatijih porodičnih firmi u gradu. Ozon je prva firma svoje vrste
+          koja je otvorena na teritoriji Kruševca, i posle tri decenije rada
+          predstavlja standard u svom polju. <br />
+          Ozon je rasao i razvijao se zajedno sa porodicom i ostala je u
+          vlasništvu porodice Ćehić. Iako je u pitanju firma sa velikom
+          tradicijom, mašine koje koristimo prate sve moderne standarde. <br />O
+          nama dovoljno govori sam kvalitet rada, ukoliko Vas zanima kako
+          radimo, i da li smo vredni vašeg novca i vremena, slobodno pitajte
+          neke od poznanika &mdash; sigurno su nam mušterije! <br />Posetite nas
+          i uverite se i sami!
         </p>
       </section>
       <article class="review slide-in from-right">
         <h1 class="review-heading">
           Šta drugi kažu o nama
         </h1>
-        <p class="review-content">
-          <i class="fas fa-quote-left"></i> Vrhunska usluga!! Tačni i
-          profesionalni. S.S
-          <i class="fas fa-quote-right"></i>
-        </p>
+        <div class="review-flex">
+          <p class="review-content">
+            <i class="fas fa-quote-left"></i> Vrhunska usluga!! Tačni i
+            profesionalni. S.S
+            <i class="fas fa-quote-right"></i>
+          </p>
 
-        <p class="review-content">
-          <i class="fas fa-quote-left"></i>
-          Sve pohvale, brzo, kvalitetno. I.L.
-          <i class="fas fa-quote-right"></i>
-        </p>
+          <p class="review-content">
+            <i class="fas fa-quote-left"></i>
+            Sve pohvale, brzo, kvalitetno. I.L.
+            <i class="fas fa-quote-right"></i>
+          </p>
 
-        <p class="review-content">
-          <i class="fas fa-quote-left"></i> Brzi korektni,laki za dogovor. D.M.
-          <i class="fas fa-quote-right"></i>
-        </p>
+          <p class="review-content">
+            <i class="fas fa-quote-left"></i> Brzi korektni,laki za dogovor.
+            D.M.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
       </article>
+      <div class="desktop-footer">
+        <section class="map-location">
+          <iframe
+            class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.5845190416967!2d21.33418791559655!3d43.57353987912394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM0JzI0LjciTiAyMcKwMjAnMTEuMCJF!5e0!3m2!1sen!2srs!4v1622041832336!5m2!1sen!2srs"
+            allowfullscreen="false"
+            loading="lazy"
+          ></iframe>
+        </section>
 
-      <section class="map-location">
-        <iframe
-          class="map-iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.5845190416967!2d21.33418791559655!3d43.57353987912394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM0JzI0LjciTiAyMcKwMjAnMTEuMCJF!5e0!3m2!1sen!2srs!4v1622041832336!5m2!1sen!2srs"
-          allowfullscreen="false"
-          loading="lazy"
-        ></iframe>
-      </section>
+        <footer class="footer-main">
+          <p>
+            Ozon Tepih Servis Kruševac &copy; 2021
+          </p>
+          <p><a href="tel:381037441200">037 441 200</a></p>
+          <p>Radno Vreme: 09-18h</p>
+        </footer>
+      </div>
     </div>
-    <!-- -->
-
-    <footer class="footer-main">
-      <p>
-        Ozon Tepih Servis Kruševac &copy; 2021
-      </p>
-      <p><a href="tel:381037441200">037 441 200</a></p>
-      <p>Radno Vreme: 09-18h</p>
-    </footer>
-
     <script src="./src/js/main.js"></script>
   </body>
 </html>

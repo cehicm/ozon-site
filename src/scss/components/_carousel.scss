@@ -9,7 +9,11 @@
     margin-bottom: 30px;
     overflow: hidden;
     @include mixins.breakpoint(tablet) {
-        height: 450px;
+        height: 28vh;
+    }
+
+    @include mixins.breakpoint(laptop) {
+        height: 90vh;
     }
 
     .carousel-slide {
@@ -21,7 +25,11 @@
             }
 
             @include mixins.breakpoint(tablet) {
-                height: 450px;
+                height: 28vh;
+            }
+
+            @include mixins.breakpoint(laptop) {
+                height: 90vh;
             }
         }
     }

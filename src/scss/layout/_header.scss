@@ -6,14 +6,19 @@
     column-gap: 70px;
     padding: 10px 0;
 
-    .header-image {
-        width: 13vw;
-    }
-
     @include mixins.breakpoint(phablet) {
         padding: 10px 30px;
+    }
 
-        .header-image {
+    @include mixins.breakpoint(laptop) {
+        gap: 558px;
+    }
+
+    .header-image {
+        width: 13vw;
+        @include mixins.breakpoint(phablet) {
+            padding: 10px 30px;
+
             width: 15vw;
         }
     }

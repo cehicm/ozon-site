@@ -77,9 +77,12 @@ nav {
             position: absolute;
             top: 74px;
             z-index: 1;
-            width: 294px;
-            /* text-align: left; */
+            width: 18vw;
             text-align-last: left;
+
+            @include mixins.breakpoint(desktop) {
+                width: 31vw;
+            }
         }
 
         .submenu-active {

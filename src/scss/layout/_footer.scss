@@ -1,6 +1,13 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixins" as mixins;
 
+.desktop-footer {
+    @include mixins.breakpoint(laptop) {
+        border: 1px solid black;
+        padding: 29px;
+    }
+}
+
 .footer-main {
     margin-top: 20px;
     @include mixins.white-t-black-bg;
@@ -8,5 +15,12 @@
 
     @include mixins.breakpoint(tablet) {
         height: 120px;
+    }
+
+    @include mixins.breakpoint(laptop) {
+        @include mixins.black-t-white-bg;
+        height: auto;
+        width: 50%;
+        place-self: center;
     }
 }

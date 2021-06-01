@@ -1,6 +1,12 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixins" as mixins;
 
+.flex-table {
+    @include mixins.breakpoint(laptop) {
+        width: 50%;
+        text-align: -webkit-center;
+    }
+}
 .services-table {
     border-collapse: collapse;
     color: variables.$black;
@@ -19,5 +25,9 @@
 
     td {
         padding: 6px;
+
+        @include mixins.breakpoint(laptop) {
+            padding: 20px;
+        }
     }
 }
