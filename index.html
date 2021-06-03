@@ -43,12 +43,15 @@
         </a>
         <div class="flex-contact-info">
           <p>
-            <a href="tel:381037441200">037 441 200</a>
-          </p>
-          <p>
             Đakona Avakuma 31 <br />
             37000 Kruševac
+          </div>p>
+
+          <p>
+            <a href="tel:381037441200">037 441 200</a>
           </p>
+          <p><a href="tel:381641195445">064 11 95 445</a></p>
+          <p></p>
         </div>
       </div>
     </header>
@@ -78,7 +81,10 @@
         <li class="item"><a href="#">Galerija</a></li>
 
         <li class="toggle">
-          <a href="#"><i class="fas fa-bars"> </i></a>
+          Meni
+          <a href="#">
+            <i class="fas fa-bars"> </i>
+          </a>
         </li>
       </ul>
     </nav>
@@ -86,21 +92,33 @@
     <div class="container">
       <div class="carousel">
         <div class="carousel-slide">
-          <img src="./src/img/carousel/slide1.jpg" alt="tepisi" />
+          <img
+            src="./src/img/carousel/slide1.jpg"
+            alt="tepisi"
+            loading="lazy"
+          />
           <div class="carousel-text">
             Sa vama više od 30 godina!
           </div>
         </div>
 
         <div class="carousel-slide">
-          <img src="./src/img/carousel/slide2.jpg" alt="tepih i žuti tabure" />
+          <img
+            src="./src/img/carousel/slide2.jpg"
+            alt="tepih i žuti tabure"
+            loading="lazy"
+          />
           <div class="carousel-text">
             Preuzimanje i vraćanje na vašu adresu.
           </div>
         </div>
 
         <div class="carousel-slide">
-          <img src="./src/img/carousel/slide3.jpg" alt="pas leži na tepihu" />
+          <img
+            src="./src/img/carousel/slide3.jpg"
+            alt="pas leži na tepihu"
+            loading="lazy"
+          />
           <div class="carousel-text">
             Kvalitetna usluga koju svi prepoznaju.
           </div>
@@ -143,8 +161,13 @@
                 <td>Pranje troseda</td>
                 <td>1500 /kom</td>
               </tr>
+              <tr>
+                <td>Minimum za naplatu</td>
+                <td>5m<sup>2</sup></td>
+              </tr>
             </tbody>
           </table>
+
           <button
             class="btn-primary"
             id="see-more"
@@ -171,11 +194,11 @@
                 >&mdash; izaberite uslugu &mdash;
               </option>
               <option value="180">Pranje tepiha</option>
-              <option value="295">Pranje i poliranje pločica</option>
+              <option value="500">Pranje i mebla(sedno mesto)</option>
               <option value="140">Pranje tvrdih podova</option>
             </select>
 
-            <label> m<sup>2</sup> : </label>
+            <label> m<sup>2</sup>/kom: </label>
             <input type="number" class="calc-form-input" />
             <button id="calculate" class="btn-primary">Izračunaj!</button>
           </form>
@@ -194,13 +217,11 @@
           najpoznatijih porodičnih firmi u gradu. Ozon je prva firma svoje vrste
           koja je otvorena na teritoriji Kruševca, i posle tri decenije rada
           predstavlja standard u svom polju. <br />
-          Ozon je rasao i razvijao se zajedno sa porodicom i ostala je u
-          vlasništvu porodice Ćehić. Iako je u pitanju firma sa velikom
-          tradicijom, mašine koje koristimo prate sve moderne standarde. <br />O
-          nama dovoljno govori sam kvalitet rada, ukoliko Vas zanima kako
-          radimo, i da li smo vredni vašeg novca i vremena, slobodno pitajte
-          neke od poznanika &mdash; sigurno su nam mušterije! <br />Posetite nas
-          i uverite se i sami!
+          Iako je u pitanju firma sa velikom tradicijom, mašine koje koristimo
+          prate sve moderne standarde. O nama dovoljno govori sam kvalitet rada,
+          ukoliko Vas zanima da li smo vredni vašeg novca i vremena, slobodno
+          pitajte neke od poznanika &mdash; sigurno su nam mušterije!
+          <br />Posetite nas i uverite se i sami!
         </p>
       </section>
       <article class="review slide-in from-right">
@@ -238,11 +259,15 @@
         </section>
 
         <footer class="footer-main">
+          <p>Radno Vreme: 09-18h</p>
+          <p>
+            Preuzimanje:
+            <span class="hours-span">Pon-Pet: 16-18h </span>
+            <span class="hours-span">Subota: 13-15h </span>
+          </p>
           <p>
             Ozon Tepih Servis Kruševac &copy; 2021
           </p>
-          <p><a href="tel:381037441200">037 441 200</a></p>
-          <p>Radno Vreme: 09-18h</p>
         </footer>
       </div>
     </div>

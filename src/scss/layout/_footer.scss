@@ -10,12 +10,22 @@
 
 .footer-main {
     margin-top: 20px;
-    @include mixins.white-t-black-bg;
     padding: 10px;
 
-    @include mixins.breakpoint(tablet) {
-        height: 120px;
+    p:nth-child(2) {
+        padding-top: 6px;
     }
+
+    p:nth-child(3) {
+        color: #4169e1;
+        font-size: 0.8rem;
+        padding-top: 6px;
+    }
+
+    .hours-span {
+        padding: 1px;
+    }
+    @include mixins.white-t-black-bg;
 
     @include mixins.breakpoint(laptop) {
         @include mixins.black-t-white-bg;
@@ -23,4 +33,11 @@
         width: 50%;
         place-self: center;
     }
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
 }

@@ -15,12 +15,10 @@ const appearOnScroll = new IntersectionObserver(function (
   appearOnScroll
 ) {
   entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
+    !entry.isIntersecting
+      ? true
+      : entry.target.classList.add("appear") &&
+        appearOnScroll.unobserve(entry.target);
   });
 },
 appearOptions);
@@ -34,6 +32,7 @@ sliders.forEach((slider) => {
 });
 
 // Toggle mobile menu
+
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
@@ -46,32 +45,31 @@ function toggleMenu() {
 
 // Activate Submenu
 function toggleItem() {
-  if (this.classList.contains("submenu-active")) {
-    this.classList.remove("submenu-active");
-  } else if (menu.querySelector(".submenu-active")) {
-    menu.querySelector(".submenu-active").classList.remove("submenu-active");
-    this.classList.add("submenu-active");
-  } else {
-    this.classList.add("submenu-active");
-  }
+  this.classList.contains("submenu-active")
+    ? this.classList.remove("submenu-active")
+    : menu.querySelector(".submenu-active")
+    ? menu
+        .querySelector(".submenu-active")
+        .classList.remove("submenu-active") &&
+      this.classList.add("submenu-active")
+    : this.classList.add("submenu-active");
 }
 
 // Close Submenu From Anywhere
 function closeSubmenu(evt) {
   let isClickInside = menu.contains(evt.target);
 
-  if (!isClickInside && menu.querySelector(".submenu-active")) {
-    menu.querySelector(".submenu-active").classList.remove("submenu-active");
-  }
-}
-if (toggle) {
-  toggle.addEventListener("click", toggleMenu, false);
+  !isClickInside && menu.querySelector(".submenu-active")
+    ? menu.querySelector(".submenu-active").classList.remove("submenu-active")
+    : null;
+
+  toggle ? toggle.addEventListener("click", toggleMenu, false) : null;
 }
 
 for (let item of items) {
-  if (item.querySelector(".submenu")) {
-    item.addEventListener("click", toggleItem, false);
-  }
+  item.querySelector(".submenu")
+    ? item.addEventListener("click", toggleItem, false)
+    : null;
   item.addEventListener("keypress", toggleItem, false);
 }
 document.addEventListener("click", closeSubmenu, false);
@@ -79,20 +77,18 @@ document.addEventListener("click", closeSubmenu, false);
 //Calculator
 const calculateServices = (evt) => {
   evt.preventDefault();
-
   const selectCalc = parseFloat(document.querySelector(".select-calc").value);
   const userInput = document.querySelector(".calc-form-input").value;
   const resultSpan = document.querySelector(".result-span");
+  const result = selectCalc * userInput;
 
-  if (userInput === "" || userInput == 0) {
-    resultSpan.innerHTML = "Unesite ispravnu vrednost";
-    return;
-  } else if (!selectCalc) {
-    resultSpan.innerHTML = "Odaberite uslugu";
-  } else {
-    const result = document.querySelector(".result-span");
-    result.innerHTML = selectCalc * userInput + "rsd";
-  }
+  userInput === "" || userInput == 0
+    ? (resultSpan.innerHTML = "Unesite ispravnu vrednost")
+    : !selectCalc
+    ? (resultSpan.innerHTML = "Odaberite uslugu")
+    : result <= 900
+    ? (resultSpan.innerHTML = "900rsd")
+    : (resultSpan.innerHTML = result + "rsd");
 };
 
 calcBtn.addEventListener("click", calculateServices);
