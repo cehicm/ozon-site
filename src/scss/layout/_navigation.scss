@@ -8,18 +8,22 @@ nav {
 
 .menu {
     padding: 13px 5px;
-
+    @include mixins.breakpoint(phablet) {
+    }
     .item {
         padding: 10px;
         order: 3;
         width: 100%;
-        text-align: center;
         display: none;
 
         a {
             display: block;
             padding: 15px 5px;
             color: variables.$white;
+
+            @include mixins.breakpoint(laptop) {
+                padding: 18px 4px;
+            }
 
             &:hover::after {
                 color: #ccc;
@@ -30,29 +34,17 @@ nav {
         order: 1;
         margin-left: auto;
         color: variables.$white;
-
+        @include mixins.breakpoint(tablet) {
+            order: 2;
+            padding-top: 12px;
+        }
         i {
             color: variables.$white;
         }
     }
 
-    //Tablet Responsive
-    @include mixins.breakpoint(phablet) {
-        body {
-            background-color: rgb(199, 147, 147);
-        }
-        .menu {
-            justify-content: center;
-        }
-
-        .toggle {
-            text-align: right;
-            order: 2;
-        }
-    }
-
     //Desktop Responsive
-    @include mixins.breakpoint(desktop) {
+    @include mixins.breakpoint(laptop) {
         .menu {
             background: none;
         }
@@ -80,8 +72,9 @@ nav {
             width: 18vw;
             text-align-last: left;
 
-            @include mixins.breakpoint(desktop) {
-                width: 31vw;
+            @include mixins.breakpoint(laptop) {
+                top: 102px;
+                width: 48vw;
             }
         }
 
@@ -102,7 +95,6 @@ nav {
 
 .menu li.subitem a {
     padding: 10px;
-    text-align: center;
 }
 
 .submenu {
@@ -117,14 +109,8 @@ nav {
 .submenu-active .submenu {
     display: block;
 }
-.has-submenu i {
-    font-size: 0.63rem;
-}
+
 .has-submenu > a::after {
-    font-family: "Font Awesome 5 Free";
-    font-size: 0.63rem;
-    line-height: 16px;
-    font-weight: 900;
     content: "\f078";
     color: variables.$white;
     padding-left: 5px;

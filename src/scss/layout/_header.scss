@@ -11,15 +11,17 @@
     }
 
     @include mixins.breakpoint(laptop) {
-        gap: 558px;
+        gap: 358px;
     }
 
     .header-image {
-        width: 13vw;
+        width: 30vw;
+        height: 6vh;
         @include mixins.breakpoint(phablet) {
-            padding: 10px 30px;
-
-            width: 15vw;
+            height: 8vh;
+        }
+        @include mixins.breakpoint(laptop) {
+            height: 12vh;
         }
     }
 }
@@ -28,7 +30,6 @@
     margin: auto;
     p,
     a {
-        @include mixins.content-main-style;
         color: variables.$black;
         padding: 1px;
         overflow: hidden;

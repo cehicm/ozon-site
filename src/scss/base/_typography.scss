@@ -47,8 +47,10 @@ th {
     }
 }
 .flex-contact-info {
+    @include mixins.content-main-style;
     p,
     a {
+        font-weight: 200;
         font-size: 0.9rem;
         line-height: 1;
         text-align: center;
@@ -56,11 +58,50 @@ th {
         @include mixins.breakpoint(phablet) {
             font-size: 1.5rem;
         }
+        @include mixins.breakpoint(laptop) {
+            font-weight: 500;
+            font-size: 1.9rem;
+            line-height: 38px;
+        }
     }
 }
 
 // Nav Styles
+.menu {
+    @include mixins.breakpoint(phablet) {
+        justify-content: center;
+    }
+    .item {
+        text-align: center;
 
+        a {
+            @include mixins.breakpoint(laptop) {
+                padding: 18px 4px;
+                font-size: 1.9rem; //////////////////////
+            }
+        }
+    }
+    .toggle {
+        @include mixins.breakpoint(phablet) {
+            text-align: right;
+        }
+    }
+}
+
+.has-submenu i {
+    font-size: 0.63rem;
+}
+
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.63rem;
+    font-weight: 900;
+    line-height: 16px;
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.2rem;
+    }
+}
 .toggle {
     font-family: "Open Sans", "Courier New", Courier, monospace;
 }
@@ -202,6 +243,17 @@ th {
 }
 
 .footer-main {
+    p:nth-child(3) {
+        font-size: 0.8rem;
+        @include mixins.breakpoint(laptop) {
+            font-size: 1.4rem;
+        }
+
+        @include mixins.breakpoint(desktop) {
+            font-size: 1.4rem;
+        }
+    }
+
     @include mixins.breakpoint(phablet) {
         font-size: 1.3rem;
     }
@@ -210,16 +262,24 @@ th {
         font-size: 1.5rem;
     }
 
-    .hours-span {
-        display: block;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        font-size: 0.8rem;
-        @include mixins.breakpoint(phablet) {
-            font-size: 1rem;
-        }
+    @include mixins.breakpoint(laptop) {
+        font-size: 2rem;
+    }
+}
 
-        @include mixins.breakpoint(tablet) {
-            font-size: 1.2rem;
-        }
+.hours-span {
+    display: block;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 0.8rem;
+    @include mixins.breakpoint(phablet) {
+        font-size: 1rem;
+    }
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.2rem;
+    }
+
+    @include mixins.breakpoint(laptop) {
+        font-size: 1.5rem;
     }
 }
