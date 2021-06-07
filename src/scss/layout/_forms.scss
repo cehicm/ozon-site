@@ -12,7 +12,6 @@
         border: 1px solid variables.$black;
 
         @include mixins.breakpoint(phablet) {
-            height: 87vh;
             justify-content: space-evenly;
             padding: 5px;
 
@@ -38,6 +37,7 @@
 }
 
 .services-calc-form {
+    height: 45vh;
     width: 80vw;
     padding: 14px;
     margin-top: 10px;
@@ -45,8 +45,9 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     @include mixins.breakpoint(phablet) {
-        height: 105vh;
-        width: 46vh;
+        height: 81vh;
+        width: 60vw;
+        padding: 40px;
         background-color: green;
     }
 
