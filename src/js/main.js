@@ -98,9 +98,9 @@ calcBtn.addEventListener("click", calculateServices);
 
 // setInterval(function () {
 //   $(".carousel > div:first")
-//     .fadeOut(4000)
+//     .fadeOut(5000)
 //     .next()
-//     .fadeIn(4000)
+//     .fadeIn(5000)
 //     .end()
 //     .appendTo(".carousel");
-// }, 4000);
+// }, 5000);

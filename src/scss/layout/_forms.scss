@@ -46,7 +46,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     @include mixins.breakpoint(phablet) {
-        height: 53vh;
+        height: 55vh;
         width: 46vh;
     }
 
@@ -83,10 +83,14 @@
         padding: 5px 10px;
         border-radius: 6px;
 
+        @include mixins.breakpoint(phablet) {
+            padding: 8px 10px;
+        }
         @include mixins.breakpoint(tablet) {
             margin-top: -27px;
             padding: 10px;
             width: 20vw;
+            padding: 8px 10px;
         }
 
         @include mixins.breakpoint(laptop) {

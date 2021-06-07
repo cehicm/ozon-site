@@ -58,6 +58,11 @@ th {
         @include mixins.breakpoint(phablet) {
             font-size: 1.5rem;
         }
+
+        @include mixins.breakpoint(tablet) {
+            font-size: 1.7rem;
+        }
+
         @include mixins.breakpoint(laptop) {
             font-weight: 500;
             font-size: 1.9rem;
@@ -130,13 +135,15 @@ th {
     color: variables.$white;
     font-size: 2rem;
     text-align: center;
-
+    @include mixins.breakpoint(phablet) {
+        font-size: 2.35rem;
+    }
     @include mixins.breakpoint(tablet) {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
 }
 
-// Table Styles
+// Table
 
 .services-table {
     @include mixins.content-main-style;
@@ -146,7 +153,7 @@ th {
     }
 }
 
-//Form  Styles
+//Form
 .services-calc {
     @include mixins.content-main-style;
     text-align-last: center;
@@ -165,7 +172,7 @@ th {
             line-height: 0;
 
             @include mixins.breakpoint(phablet) {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             @include mixins.breakpoint(laptop) {
@@ -180,7 +187,7 @@ th {
 
             @include mixins.breakpoint(phablet) {
                 @include mixins.breakpoint(phablet) {
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                 }
             }
         }
@@ -188,16 +195,17 @@ th {
     .result-span {
         color: red;
         @include mixins.breakpoint(phablet) {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 600;
         }
 
         @include mixins.breakpoint(tablet) {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
         }
     }
 }
 
+//About us section
 .about-us {
     text-align: center;
 
@@ -224,23 +232,11 @@ th {
         font-weight: 400;
     }
     @include mixins.breakpoint(tablet) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
 
-.btn-primary {
-    font-family: "Poppins";
-
-    color: variables.$black;
-
-    @include mixins.breakpoint(phablet) {
-        font-size: 1.3rem;
-    }
-
-    @include mixins.breakpoint(tablet) {
-        font-size: 1.5rem;
-    }
-}
+//Footer
 
 .footer-main {
     p:nth-child(3) {
@@ -255,11 +251,11 @@ th {
     }
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     @include mixins.breakpoint(tablet) {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
     }
 
     @include mixins.breakpoint(laptop) {
@@ -272,14 +268,41 @@ th {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 0.8rem;
     @include mixins.breakpoint(phablet) {
-        font-size: 1rem;
-    }
-
-    @include mixins.breakpoint(tablet) {
         font-size: 1.2rem;
     }
 
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.6rem;
+    }
+
     @include mixins.breakpoint(laptop) {
+        font-size: 1.8rem;
+    }
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.6rem;
+    }
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.9rem;
+    }
+}
+
+//Button
+.btn-primary {
+    font-family: "Poppins";
+
+    color: variables.$black;
+
+    @include mixins.breakpoint(phablet) {
+        font-size: 1.5rem;
+    }
+
+    @include mixins.breakpoint(tablet) {
         font-size: 1.5rem;
     }
 }

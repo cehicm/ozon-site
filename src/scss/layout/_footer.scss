@@ -23,6 +23,10 @@
 
     .hours-span {
         padding: 1px;
+
+        @include mixins.breakpoint(tablet) {
+            padding: 4px;
+        }
     }
     @include mixins.white-t-black-bg;
 
@@ -32,11 +36,12 @@
         width: 50%;
         place-self: center;
     }
-}
 
-header {
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    width: 100%;
+    .social-icons i {
+        padding: 10px 5px;
+
+        &:hover {
+            color: #a9a9a9;
+        }
+    }
 }

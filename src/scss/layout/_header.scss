@@ -1,6 +1,13 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixins" as mixins;
 
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
 .flex-header {
     background-color: #cddeef;
     column-gap: 70px;
