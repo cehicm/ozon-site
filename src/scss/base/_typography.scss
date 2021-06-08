@@ -335,18 +335,43 @@ th {
     }
 }
 
-.social-icons i {
-    font-size: 1.2rem;
+.social-icons {
+    margin-top: 8px;
+    a {
+        text-decoration: none;
+    }
+    .svg-icon {
+        height: 2rem;
+        width: 2rem;
+        &:hover {
+            opacity: 0.6;
+        }
 
-    @include mixins.breakpoint(phablet) {
-        font-size: 1.6rem;
+        @include mixins.breakpoint(phablet) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        @include mixins.breakpoint(tablet) {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+
+        @include mixins.breakpoint(ldesktop) {
+            height: 5.5rem;
+            width: 5.5rem;
+        }
     }
 
-    @include mixins.breakpoint(tablet) {
-        font-size: 2.2rem;
+    .svg-icon path,
+    .svg-icon polygon,
+    .svg-icon rect {
+        fill: #4691f6;
     }
-    @include mixins.breakpoint(ldesktop) {
-        font-size: 3.2rem;
+
+    .svg-icon circle {
+        stroke: #4691f6;
+        stroke-width: 1;
     }
 }
 
