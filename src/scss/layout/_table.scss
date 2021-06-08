@@ -17,6 +17,13 @@
     thead {
         padding: 10px;
         margin-top: 25px;
+
+        @include mixins.breakpoint(laptop) {
+            margin-top: 45px;
+        }
+        @include mixins.breakpoint(ldesktop) {
+            margin-top: 0px;
+        }
     }
 
     tr {
@@ -26,8 +33,8 @@
     td {
         padding: 6px;
 
-        @include mixins.breakpoint(laptop) {
-            padding: 20px;
+        @include mixins.breakpoint(tablet) {
+            padding: 9px 40px;
         }
     }
 }

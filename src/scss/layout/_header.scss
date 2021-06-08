@@ -14,21 +14,34 @@ header {
     padding: 10px 0;
 
     @include mixins.breakpoint(phablet) {
-        padding: 10px 30px;
+        padding: 10px 0;
     }
 
     @include mixins.breakpoint(laptop) {
         gap: 358px;
     }
 
+    @include mixins.breakpoint(ldesktop) {
+        height: 14vh;
+        gap: 500px;
+    }
+    a {
+        margin: 0;
+    }
+
     .header-image {
         width: 30vw;
         height: 6vh;
+        transform: translate(0%, 30%);
         @include mixins.breakpoint(phablet) {
-            height: 8vh;
+            height: 7vh;
         }
         @include mixins.breakpoint(laptop) {
-            height: 12vh;
+            height: 10vh;
+        }
+
+        @include mixins.breakpoint(ldesktop) {
+            height: 8vh;
         }
     }
 }
@@ -40,5 +53,8 @@ header {
         color: variables.$black;
         padding: 1px;
         overflow: hidden;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        margin: 12px 140px 0px 0px;
     }
 }

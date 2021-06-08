@@ -8,7 +8,16 @@ const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 const babel = require("gulp-babel");
 sass.compiler = require("dart-sass");
-const imagemin = require("gulp-imagemin");
+const sharp = require("sharp");
+const directory = "src/images/carousel";
+const fs = require("fs");
+
+//Img squash
+fs.readdirSync(directory).forEach((file) => {
+  sharp(`${directory}/${file}`)
+    .resize(200, 200)
+    .toFile(`${directory}/${file}-200.jpg`);
+});
 
 //Sass tasks
 function scssTask() {
@@ -57,14 +66,7 @@ function watchTask() {
   );
 }
 
-function imgSquash() {
-  return gulp
-    .src("src/img/*")
-    .pipe(imagemin())
-    .pipe(gulp.dest("dist/mini/img"));
-}
-
 // Default Gulp Task
 exports.default = series(browsersyncServer, watchTask);
 
-exports.build = series(parallel(babelTask, imgSquash, scssTask));
+exports.build = series(parallel(babelTask, scssTask));

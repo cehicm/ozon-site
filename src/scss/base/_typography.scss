@@ -28,6 +28,9 @@ th {
     @include mixins.breakpoint(tablet) {
         font-size: 2.3rem;
     }
+    @include mixins.breakpoint(ldesktop) {
+        font-size: 3rem;
+    }
 }
 
 .services-calc-form,
@@ -56,7 +59,7 @@ th {
         text-align: center;
 
         @include mixins.breakpoint(phablet) {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         @include mixins.breakpoint(tablet) {
@@ -67,6 +70,11 @@ th {
             font-size: 1.3rem;
             font-weight: 500;
             line-height: 28px;
+        }
+        @include mixins.breakpoint(ldesktop) {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 42px;
         }
     }
 }
@@ -83,6 +91,9 @@ th {
             @include mixins.breakpoint(laptop) {
                 padding: 18px 4px;
                 font-size: 1.3rem;
+            }
+            @include mixins.breakpoint(ldesktop) {
+                font-size: 2.2rem;
             }
         }
     }
@@ -133,13 +144,16 @@ th {
     font-family: "Poppins";
     font-weight: bolder;
     color: variables.$white;
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-align: center;
     @include mixins.breakpoint(phablet) {
         font-size: 2.35rem;
     }
     @include mixins.breakpoint(tablet) {
         font-size: 2.7rem;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        font-size: 3.7rem;
     }
 }
 
@@ -149,7 +163,14 @@ th {
     @include mixins.content-main-style;
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.9rem;
+        font-size: 1.4rem;
+    }
+
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.7rem;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        font-size: 2.5rem;
     }
 }
 
@@ -165,45 +186,62 @@ th {
             @include mixins.breakpoint(phablet) {
                 font-size: 1.3rem;
             }
+
+            @include mixins.breakpoint(ldesktop) {
+                font-size: 1.5rem;
+            }
         }
 
         label {
             font-weight: 400;
             line-height: 2;
             @include mixins.breakpoint(phablet) {
-                font-size: 2rem;
+                font-size: 1.3rem;
+            }
+
+            @include mixins.breakpoint(tablet) {
+                font-size: 1.5rem;
             }
 
             @include mixins.breakpoint(laptop) {
                 font-size: 1.7rem;
             }
-        }
 
-        option {
-            font-size: 0.8rem;
+            @include mixins.breakpoint(ldesktop) {
+                font-size: 2.2rem;
+            }
         }
 
         .select-calc,
-        .select-calc:invalid {
+        .select-calc:invalid,
+        option {
             font-size: 0.8rem;
             font-weight: 400;
 
             @include mixins.breakpoint(phablet) {
-                @include mixins.breakpoint(phablet) {
-                    font-size: 1.4rem;
-                }
+                font-size: 1rem;
+            }
+            @include mixins.breakpoint(tablet) {
+                font-size: 1.1rem;
+            }
+            @include mixins.breakpoint(ldesktop) {
+                font-size: 1.4rem;
             }
         }
     }
     .result-span {
-        color: red;
+        color: #3f51b5;
         @include mixins.breakpoint(phablet) {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 600;
         }
 
         @include mixins.breakpoint(tablet) {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
+        }
+
+        @include mixins.breakpoint(ldesktop) {
+            font-size: 1.9rem;
         }
     }
 }
@@ -217,11 +255,14 @@ th {
         line-height: 1.4;
 
         @include mixins.breakpoint(phablet) {
-            font-size: 1.58rem;
+            font-size: 1.3rem;
         }
 
         @include mixins.breakpoint(tablet) {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+        }
+        @include mixins.breakpoint(ldesktop) {
+            font-size: 2.1rem;
         }
     }
 }
@@ -231,11 +272,16 @@ th {
     font-size: 0.9rem;
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 400;
     }
-    @include mixins.breakpoint(tablet) {
-        font-size: 1.8rem;
+
+    @include mixins.breakpoint(laptop) {
+        font-size: 1.5rem;
+    }
+
+    @include mixins.breakpoint(laptop) {
+        font-size: 1.7rem;
     }
 }
 
@@ -254,7 +300,7 @@ th {
     }
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     @include mixins.breakpoint(tablet) {
@@ -262,7 +308,10 @@ th {
     }
 
     @include mixins.breakpoint(laptop) {
-        font-size: 2rem;
+        font-size: 1.6rem;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        font-size: 2.6rem;
     }
 }
 
@@ -279,7 +328,10 @@ th {
     }
 
     @include mixins.breakpoint(laptop) {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        font-size: 2rem;
     }
 }
 
@@ -291,7 +343,10 @@ th {
     }
 
     @include mixins.breakpoint(tablet) {
-        font-size: 1.9rem;
+        font-size: 2.2rem;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        font-size: 3.2rem;
     }
 }
 
@@ -302,10 +357,14 @@ th {
     color: variables.$black;
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     @include mixins.breakpoint(tablet) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        font-size: 1.4rem;
+        font-weight: 600;
     }
 }

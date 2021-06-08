@@ -27,7 +27,11 @@
 // Responsive Mixins
 
 @mixin breakpoint($point) {
-    @if $point == desktop {
+    @if $point == ldesktop {
+        @media (min-width: 160rem) {
+            @content;
+        }
+    } @else if $point == desktop {
         @media (min-width: 70rem) {
             @content;
         }

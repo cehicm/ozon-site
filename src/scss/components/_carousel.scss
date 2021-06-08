@@ -5,32 +5,17 @@
     box-sizing: content-box;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    margin-bottom: 20px;
     overflow: hidden;
-    @include mixins.breakpoint(phablet) {
-        height: 44vh;
-    }
-
-    @include mixins.breakpoint(laptop) {
-        height: 90vh;
-    }
 
     .carousel-slide {
-        img {
-            width: 100%;
-            height: 38vh;
-            @include mixins.breakpoint(phablet) {
-                object-fit: cover;
-            }
-
-            @include mixins.breakpoint(phablet) {
-                height: 50vh;
-            }
-
-            @include mixins.breakpoint(laptop) {
-                height: 90vh;
-            }
-        }
+        height: inherit;
+    }
+    img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        width: 100vw;
+        height: inherit;
     }
 }
 

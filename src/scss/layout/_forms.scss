@@ -18,15 +18,20 @@
             h2 {
                 padding: 35px;
                 margin-top: 15px;
+
+                @include mixins.breakpoint(laptop) {
+                    margin-top: 42px;
+                }
+                @include mixins.breakpoint(ldesktop) {
+                    margin-top: 185px;
+                }
             }
-        }
-        @include mixins.breakpoint(tablet) {
-            height: 89vh;
         }
 
         @include mixins.breakpoint(laptop) {
             width: 50%;
-            height: 800px;
+            margin: 0;
+            border: none;
         }
 
         .result-span {
@@ -45,22 +50,24 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     @include mixins.breakpoint(phablet) {
-        height: 81vh;
-        width: 60vw;
         padding: 40px;
-        background-color: green;
+        height: 50vh;
+        width: 60vw;
     }
 
     @include mixins.breakpoint(tablet) {
+        height: 50vh;
         width: 64vw;
         padding: 30px;
-        background-color: red;
     }
 
     @include mixins.breakpoint(laptop) {
-        height: 542px;
-        width: 45vw;
-        background-color: pink;
+        height: 55vh;
+        width: 35vw;
+    }
+    @include mixins.breakpoint(ldesktop) {
+        height: 44vh;
+        width: 29vw;
     }
 
     .select-calc {
@@ -74,6 +81,10 @@
         @include mixins.breakpoint(phablet) {
             padding: 10px;
             margin-top: 20px;
+        }
+        @include mixins.breakpoint(ldesktop) {
+            padding: 20px;
+            width: 13vw;
         }
 
         option {
@@ -104,9 +115,13 @@
         }
 
         @include mixins.breakpoint(laptop) {
-            width: 20vw;
+            width: 18vw;
             margin-top: -10px;
-            padding: 14px 7px;
+            padding: 9px 7px;
+        }
+        @include mixins.breakpoint(ldesktop) {
+            padding: 15px 20px;
+            width: 5vw;
         }
     }
 }

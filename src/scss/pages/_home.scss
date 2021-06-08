@@ -16,6 +16,7 @@
 
     @include mixins.breakpoint(laptop) {
         margin-top: 100px;
+        width: 70%;
     }
     &-heading {
         @include mixins.black-t-white-bg;
@@ -76,8 +77,13 @@
 
         @include mixins.breakpoint(laptop) {
             width: 30%;
-            height: 33vh;
+            height: auto;
+            padding: 56px 20px;
             border: 1px solid variables.$black;
+        }
+        @include mixins.breakpoint(ldesktop) {
+            height: 19vh;
+            padding: 120px 20px;
         }
 
         i {

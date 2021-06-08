@@ -35,8 +35,8 @@
         <a href="index.html">
           <!-- needs to be changed eventually -->
           <img
-            src="./src/img/ozon-logo.png"
-            srcset="./src/img/ozon-logo-svg.svg"
+            src="./src/images/ozon-logo.png"
+            srcset="./src/images/ozon-logo-svg.svg"
             alt="Ozon logo slika"
             class="header-image"
           />
@@ -91,7 +91,9 @@
       <div class="carousel">
         <div class="carousel-slide">
           <img
-            src="./src/img/carousel/slide1.jpg"
+            src="./src/images/carousel/slide1.jpg"
+            srcset="src/images/carousel/slide1.jpg-200.jpg 200w, "
+            sizes="(max-width: 600px), 400px, 100vw"
             alt="tepisi"
             loading="lazy"
           />
@@ -102,7 +104,9 @@
 
         <div class="carousel-slide">
           <img
-            src="./src/img/carousel/slide2.jpg"
+            src="./src/images/carousel/slide2.jpg"
+            srcset="src/images/carousel/slide2.jpg-200.jpg 200w, "
+            sizes="(max-width: 600px), 400px, 100vw"
             alt="tepih i žuti tabure"
             loading="lazy"
           />
@@ -113,10 +117,13 @@
 
         <div class="carousel-slide">
           <img
-            src="./src/img/carousel/slide3.jpg"
-            alt="pas leži na tepihu"
+            src="./src/images/carousel/slide3.jpg"
+            srcset="src/images/carousel/slide3.jpg-200.jpg 200w, "
+            sizes="(max-width: 600px), 400px, 100vw"
             loading="lazy"
+            alt="pas leži na tepihu"
           />
+
           <div class="carousel-text">
             Kvalitetna usluga koju svi prepoznaju.
           </div>
@@ -178,10 +185,10 @@
           </button>
         </div>
 
-        <div class="services-calc slide-in from-right">
+        <div class="services-calc slide-in from-right" role="form">
           <h2>Kalkulator usluga</h2>
-          <form class="services-calc-form">
-            <label> Koju ste uslugu koristili? </label>
+          <form class="services-calc-form" aria-label="Kalkulator usluga">
+            <label aria-required="true"> Koju ste uslugu koristili? </label>
 
             <select
               required
@@ -197,7 +204,7 @@
             </select>
 
             <label> m<sup>2</sup>/kom: </label>
-            <input type="number" class="calc-form-input" />
+            <input type="number" class="calc-form-input" autocorrect="off" />
             <button id="calculate" class="btn-primary">Izračunaj!</button>
           </form>
 

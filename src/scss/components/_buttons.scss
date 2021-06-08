@@ -9,9 +9,22 @@
     border: 1px solid #919191;
     border-radius: 8px;
     background-color: variables.$white;
+    @include mixins.breakpoint(phablet) {
+        padding: 15px 20px;
+    }
 
+    @include mixins.breakpoint(tablet) {
+        padding: 20px 25px;
+    }
+
+    @include mixins.breakpoint(ldesktop) {
+        padding: 34px 39px;
+    }
     &#calculate {
         margin-top: 20px;
+        @include mixins.breakpoint(ldesktop) {
+            margin-top: 55px;
+        }
     }
 
     &#see-more {
@@ -19,20 +32,16 @@
         @include mixins.breakpoint(phablet) {
             margin: 25px;
         }
+        @include mixins.breakpoint(laptop) {
+            margin-top: 40px;
+        }
+        @include mixins.breakpoint(ldesktop) {
+            margin-top: 46px;
+        }
     }
     &:hover {
         transition: 0.5s cubic-bezier(0.47, 0, 0.75, 0.72);
         background: variables.$blue;
         color: variables.$white;
-    }
-}
-
-.btn-primary {
-    @include mixins.breakpoint(phablet) {
-        padding: 15px 20px;
-    }
-
-    @include mixins.breakpoint(tablet) {
-        padding: 20px 25px;
     }
 }
