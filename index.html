@@ -4,20 +4,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader&family=Open+Sans:wght@300;400&family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins&display=swap"
       rel="stylesheet"
     />
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/dist/style.css" />
+    <link rel="stylesheet" href="/dist/css/main.min.css" />
 
     <!-- Scripts -->
     <meta charset="UTF-8" />
@@ -61,7 +55,23 @@
         <li class="item"><a href="#">Početna</a></li>
 
         <li class="item has-submenu">
-          <a tabindex="0">Usluge</a>
+          <a tabindex="0"
+            >Usluge
+
+            <svg
+              class="arrow-down"
+              viewBox="-2.5 -5 75 60"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,0 l35,50 l35,-50"
+                fill="none"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-width="5"
+              />
+            </svg>
+          </a>
           <ul class="submenu">
             <li class="subitem"><a href="#">Pranje tepiha i itisona</a></li>
             <li class="subitem"><a href="#">Pranje mebla</a></li>
@@ -81,7 +91,11 @@
         <li class="toggle">
           Meni
           <a href="#">
-            <i class="fas fa-bars"> </i>
+            <svg class="bars-icon" viewBox="0 0 100 80">
+              <rect width="100" height="20"></rect>
+              <rect y="30" width="100" height="20"></rect>
+              <rect y="60" width="100" height="20"></rect>
+            </svg>
           </a>
         </li>
       </ul>
@@ -97,6 +111,8 @@
             "
             sizes="(max-width: 600px) 600px, 1000px"
             src=" src\images\carousel\slide1.jpg"
+            loading="lazy"
+            alt="CHANGE alt tekst here"
           />
 
           <div class="carousel-text">
@@ -112,6 +128,8 @@
             "
             sizes="(max-width: 600px) 600px, 1000px"
             src=" src\images\carousel\slide2.jpg"
+            loading="lazy"
+            alt="CHANGE alt tekst here"
           />
           <div class="carousel-text">
             Preuzimanje i vraćanje na vašu adresu.
@@ -126,14 +144,15 @@
             "
             sizes="(max-width: 600px) 600px, 1000px"
             src=" src\images\carousel\slide3.jpg"
+            loading="lazy"
+            alt="pas leži na tepihu"
           />
           <!-- <img
             srcset="
               src\images\carousel\slide1.jpg-600.jpg   480w,
               src\images\carousel\slide1.jpg-1000.jpg 1000w
             "
-            loading="lazy"
-            alt="pas leži na tepihu"
+            
             src="./src/images/carousel/slide3.jpg"
           />
           -->
@@ -191,7 +210,7 @@
             id="see-more"
             type="button"
             value="Services Page"
-            onclick="window.location.href='src/html/services-table.html'"
+            onclick="window.location.href='src/html/services.html'"
           >
             <!-- change link -->
             Sve usluge
@@ -248,21 +267,45 @@
         </h1>
         <div class="review-flex slide-in from-right">
           <p class="review-content">
-            <i class="fas fa-quote-left"></i> Vrhunska usluga!! Tačni i
-            profesionalni. S.S
-            <i class="fas fa-quote-right"></i>
+            <object
+              class="quote-icon"
+              data="./src/images/SVG/quote-left-solid.svg"
+              type="image/svg+xml"
+            ></object>
+            Vrhunska usluga!! Tačni i profesionalni. S.S
+            <object
+              class="quote-icon"
+              data="./src/images/SVG/quote-right-solid.svg"
+              type="image/svg+xml"
+            ></object>
           </p>
 
           <p class="review-content">
-            <i class="fas fa-quote-left"></i>
+            <object
+              class="quote-icon"
+              data="./src/images/SVG/quote-left-solid.svg"
+              type="image/svg+xml"
+            ></object>
             Sve pohvale, brzo, kvalitetno. I.L.
-            <i class="fas fa-quote-right"></i>
+            <object
+              class="quote-icon"
+              data="./src/images/SVG/quote-right-solid.svg"
+              type="image/svg+xml"
+            ></object>
           </p>
 
           <p class="review-content">
-            <i class="fas fa-quote-left"></i> Brzi korektni,laki za dogovor.
-            D.M.
-            <i class="fas fa-quote-right"></i>
+            <object
+              class="quote-icon"
+              data="./src/images/SVG/quote-left-solid.svg"
+              type="image/svg+xml"
+            ></object
+            >Brzi korektni,laki za dogovor. D.M.
+            <object
+              class="quote-icon"
+              data="./src/images/SVG/quote-right-solid.svg"
+              type="image/svg+xml"
+            ></object>
           </p>
         </div>
       </article>

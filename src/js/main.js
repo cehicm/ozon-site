@@ -36,10 +36,24 @@ sliders.forEach((slider) => {
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+    toggle.querySelector(
+      "a"
+    ).innerHTML = ` <svg class="bars-icon" viewBox="0 0 100 80">
+    <rect width="100" height="20"></rect>
+    <rect y="30" width="100" height="20"></rect>
+    <rect y="60" width="100" height="20"></rect>
+  </svg>`;
+
+    // ("<i class='fas fa-bars'></i>");
   } else {
     menu.classList.add("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+    toggle.querySelector(
+      "a"
+    ).innerHTML = `<svg viewBox="0 0 40 40" enable-background="new 0 0 40 40">
+    <line class="close-icon" x1="15" y1="15" x2="25" y2="25"></line>
+    <line class="close-icon" x1="25" y1="15" x2="15" y2="25" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-miterlimit="10"></line>    
+  </path>
+  </svg>`;
   }
 }
 
@@ -98,9 +112,9 @@ calcBtn.addEventListener("click", calculateServices);
 
 // setInterval(function () {
 //   $(".carousel > div:first")
-//     .fadeOut(5000)
+//     .fadeOut(4000)
 //     .next()
-//     .fadeIn(5000)
+//     .fadeIn(4000)
 //     .end()
 //     .appendTo(".carousel");
-// }, 5000);
+// }, 4000);

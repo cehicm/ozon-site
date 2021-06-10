@@ -37,11 +37,43 @@
         place-self: center;
     }
 
-    .social-icons i {
-        padding: 10px 5px;
+    .social-icons {
+        margin-top: 8px;
+        a {
+            text-decoration: none;
+        }
+        .svg-icon {
+            height: 2rem;
+            width: 2rem;
+            &:hover {
+                opacity: 0.6;
+            }
 
-        &:hover {
-            color: #a9a9a9;
+            @include mixins.breakpoint(phablet) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            @include mixins.breakpoint(tablet) {
+                height: 3.5rem;
+                width: 3.5rem;
+            }
+
+            @include mixins.breakpoint(ldesktop) {
+                height: 5.5rem;
+                width: 5.5rem;
+            }
+        }
+
+        .svg-icon path,
+        .svg-icon polygon,
+        .svg-icon rect {
+            fill: #4691f6;
+        }
+
+        .svg-icon circle {
+            stroke: #4691f6;
+            stroke-width: 1;
         }
     }
 }

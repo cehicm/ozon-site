@@ -2,43 +2,59 @@
 const gulp = require("gulp");
 const { src, dest, watch, series, parallel } = require("gulp");
 const sass = require("gulp-sass");
-const postscss = require("gulp-postcss");
+const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 const babel = require("gulp-babel");
 sass.compiler = require("dart-sass");
-const sharp = require("sharp");
-const directory = "src/images/carousel";
-const fs = require("fs");
+const autoprefixer = require("autoprefixer");
+const rename = require("gulp-rename");
 
 //Img squash
-fs.readdirSync(directory).forEach((file) => {
-  sharp(`${directory}/${file}`)
-    .resize(200, 200)
-    .toFile(`${directory}/${file}-200.jpg`);
-});
+// const sharp = require("sharp");
+// const directory = "src/images/carousel";
+// const fs = require("fs");
+// fs.readdirSync(directory).forEach((file) => {
+//   sharp(`${directory}/${file}`)
+//     .resize(200, 200)
+//     .toFile(`${directory}/${file}-200.jpg`);
+// });
 
 //Sass tasks
-function scssTask() {
-  return src("src/scss/style.scss", { sourcemaps: true })
-    .pipe(sass())
-    .pipe(postscss([cssnano]))
-    .pipe(dest("dist", { sourcemaps: "." }));
+// function scssTask() {
+//   return src("src/scss/main.scss")
+//     .pipe(sass())
+//     .pipe(postcss([cssnano]))
+//     .pipe(dest("dist/css"));
+// }
+
+function cssTask(cb) {
+  return gulp
+    .src("src/scss/main.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./dist/css"))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(
+      rename({
+        extname: ".min.css",
+      })
+    )
+    .pipe(gulp.dest("./dist/css"));
+  cb();
 }
 
 //Javascript tasks
 // Babel
 async function babelTask() {
-  gulp
-    .src("src/js/main.js")
+  src("src/js/main.js")
     .pipe(
       babel({
         presets: ["@babel/preset-env"],
       })
     )
     .pipe(terser())
-    .pipe(gulp.dest("dist/js"));
+    .pipe(dest("dist/js"));
 }
 
 //Browser tasks
@@ -59,14 +75,14 @@ function browsersyncReload(cb) {
 
 // Watch Task
 function watchTask() {
-  watch("*html", browsersyncReload);
+  watch(["*html", "src/html/**/*.html"], browsersyncReload);
   watch(
-    ["src/scss/**/*.scss", "src/js/**/*.js"],
-    series(scssTask, babelTask, browsersyncReload)
+    ["src/scss/**/*.scss", "src/js/**/*.js", "dist/css/**/*.css"],
+    series(cssTask, babelTask, browsersyncReload)
   );
 }
 
 // Default Gulp Task
-exports.default = series(browsersyncServer, watchTask);
+exports.default = series(cssTask, browsersyncServer, watchTask, babelTask);
 
-exports.build = series(parallel(babelTask, scssTask));
+// exports.build = series(parallel(, cssTask));

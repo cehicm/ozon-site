@@ -65,6 +65,12 @@
         border-bottom: 1px solid dashed;
         background-color: #ebbf7d;
 
+        .quote-icon {
+            height: 1rem;
+            width: 2rem;
+            fill: variables.$black;
+        }
+
         @include mixins.breakpoint(phablet) {
             width: 80%;
             margin-bottom: 20px;
