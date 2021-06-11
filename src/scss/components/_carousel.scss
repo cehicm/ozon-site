@@ -15,6 +15,10 @@
         height: inherit;
         object-fit: cover;
     }
+
+    @include mixins.breakpoint(laptop) {
+        height: 55vh;
+    }
 }
 
 .carousel > div {

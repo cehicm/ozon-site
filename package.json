@@ -2,36 +2,33 @@
   "name": "ozon-site",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "IE 10"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  
+  "main": "gulpfile.js",
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.4",
-    "dart-sass": "^1.25.0",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "browser-sync": "^2.26.14",
+    "cssnano": "^5.0.6",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1",
-    "postcss": "^8.3.1",
-    "postcss-load-config": "^2.1.2"
+    "gulp-terser": "^2.0.1",
+    "node-sass": "^6.0.0"
   },
-  "private": true,
-  "dependencies": {
-    "autoprefixer": "^6.5.4",
-    "gulp-sourcemaps": "^3.0.0"
-
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cehicm/ozon-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cehicm/ozon-site/issues"
+  },
+  "homepage": "https://github.com/cehicm/ozon-site#readme"
 }

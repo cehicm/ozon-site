@@ -511,6 +511,11 @@ th {
   height: inherit;
   object-fit: cover;
 }
+@media (min-width: 64rem) {
+  .carousel {
+    height: 55vh;
+  }
+}
 
 .carousel > div {
   position: absolute;
@@ -1219,4 +1224,14 @@ nav {
   .map-location .map-iframe {
     width: 100%;
   }
+}
+
+#price-list {
+  background-color: red;
+}
+
+.price-only {
+  width: 200px;
+  height: 20px;
+  background-color: red;
 }

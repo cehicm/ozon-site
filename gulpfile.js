@@ -1,13 +1,15 @@
 //Declarations
 const gulp = require("gulp");
 const { src, dest, watch, series, parallel } = require("gulp");
-const sass = require("gulp-sass");
+var sass = require("gulp-dart-sass");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 const babel = require("gulp-babel");
-sass.compiler = require("dart-sass");
+const dartsass = require("gulp-dart-sass");
+// sass.compiler = require("gulp-dart-sass");
+
 const autoprefixer = require("autoprefixer");
 const rename = require("gulp-rename");
 
@@ -31,7 +33,7 @@ const rename = require("gulp-rename");
 
 function cssTask(cb) {
   return gulp
-    .src("src/scss/main.scss")
+    .src("./src/scss/main.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./dist/css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
