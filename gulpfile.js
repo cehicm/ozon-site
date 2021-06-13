@@ -1,15 +1,12 @@
 //Declarations
 const gulp = require("gulp");
 const { src, dest, watch, series, parallel } = require("gulp");
-var sass = require("gulp-dart-sass");
+const sass = require("gulp-dart-sass");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 const babel = require("gulp-babel");
-const dartsass = require("gulp-dart-sass");
-// sass.compiler = require("gulp-dart-sass");
-
 const autoprefixer = require("autoprefixer");
 const rename = require("gulp-rename");
 
@@ -23,14 +20,7 @@ const rename = require("gulp-rename");
 //     .toFile(`${directory}/${file}-200.jpg`);
 // });
 
-//Sass tasks
-// function scssTask() {
-//   return src("src/scss/main.scss")
-//     .pipe(sass())
-//     .pipe(postcss([cssnano]))
-//     .pipe(dest("dist/css"));
-// }
-
+//CSS tasks
 function cssTask(cb) {
   return gulp
     .src("./src/scss/main.scss")
@@ -47,7 +37,6 @@ function cssTask(cb) {
 }
 
 //Javascript tasks
-// Babel
 async function babelTask() {
   src("src/js/main.js")
     .pipe(
@@ -79,7 +68,7 @@ function browsersyncReload(cb) {
 function watchTask() {
   watch(["*html", "src/html/**/*.html"], browsersyncReload);
   watch(
-    ["src/scss/**/*.scss", "src/js/**/*.js", "dist/css/**/*.css"],
+    ["src/scss/**/*.scss", "src/js/**/*.js"],
     series(cssTask, babelTask, browsersyncReload)
   );
 }

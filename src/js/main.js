@@ -43,8 +43,6 @@ function toggleMenu() {
     <rect y="30" width="100" height="20"></rect>
     <rect y="60" width="100" height="20"></rect>
   </svg>`;
-
-    // ("<i class='fas fa-bars'></i>");
   } else {
     menu.classList.add("active");
     toggle.querySelector(

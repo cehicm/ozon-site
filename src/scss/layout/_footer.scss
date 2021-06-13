@@ -9,6 +9,7 @@
 }
 
 .footer-main {
+    @include mixins.white-t-black-bg;
     margin-top: 20px;
     padding: 10px;
 
@@ -28,7 +29,6 @@
             padding: 4px;
         }
     }
-    @include mixins.white-t-black-bg;
 
     @include mixins.breakpoint(laptop) {
         @include mixins.black-t-white-bg;
@@ -76,4 +76,11 @@
             stroke-width: 1;
         }
     }
+}
+
+//Wide footer
+.footer-main.wide {
+    @include mixins.white-t-black-bg;
+    width: 100%;
+    margin-top: 50px;
 }

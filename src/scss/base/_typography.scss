@@ -203,6 +203,7 @@ th {
             line-height: 2;
             @include mixins.breakpoint(phablet) {
                 font-size: 1.3rem;
+                line-height: 4;
             }
 
             @include mixins.breakpoint(tablet) {
@@ -215,6 +216,12 @@ th {
 
             @include mixins.breakpoint(ldesktop) {
                 font-size: 2.2rem;
+            }
+        }
+
+        .form-note {
+            @include mixins.breakpoint(laptop) {
+                font-size: 1.2rem;
             }
         }
 
@@ -357,5 +364,17 @@ th {
     @include mixins.breakpoint(ldesktop) {
         font-size: 1.4rem;
         font-weight: 600;
+    }
+}
+
+// Pages
+.pranje-mebla {
+    &-heading {
+        @include mixins.smaller-heading-style;
+        text-align: left;
+    }
+
+    &-text {
+        @include mixins.content-main-style;
     }
 }

@@ -8,6 +8,12 @@
     text-decoration: overline;
 }
 
+@mixin smaller-heading-style {
+    font-family: "Poppins", Verdana, Geneva, sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
 @mixin content-main-style {
     font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
     font-weight: 200;

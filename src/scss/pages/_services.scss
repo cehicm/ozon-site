@@ -1,0 +1,19 @@
+.services-img {
+    padding: 20px;
+    &-single {
+        height: 30vh;
+        width: 90vw;
+    }
+}
+
+.pranje-mebla {
+    text-align: left;
+
+    &-heading {
+        padding: 0px 20px 20px;
+    }
+
+    &-text {
+        padding: 0px 20px;
+    }
+}

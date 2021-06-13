@@ -24,7 +24,7 @@
   <body>
     <header>
       <div class="flex-header">
-        <a href="index.html">
+        <a href="./index.html">
           <!-- needs to be changed eventually -->
           <img
             src="./src/images/ozon-logo.png"
@@ -50,7 +50,7 @@
 
     <nav>
       <ul class="menu">
-        <li class="item"><a href="#">Početna</a></li>
+        <li class="item"><a href="/index.html">Početna</a></li>
 
         <li class="item has-submenu">
           <a tabindex="0"
@@ -72,7 +72,9 @@
           </a>
           <ul class="submenu">
             <li class="subitem"><a href="#">Pranje tepiha i itisona</a></li>
-            <li class="subitem"><a href="#">Pranje mebla</a></li>
+            <li class="subitem">
+              <a href="./src/html/pranje-mebla.html">Pranje mebla</a>
+            </li>
             <li class="subitem">
               <a href="#">Pranje jorgana, jastuka i ćebadi</a>
             </li>
@@ -81,7 +83,7 @@
             </li>
           </ul>
         </li>
-        <li class="item"><a href="#">Cenovnik</a></li>
+        <li class="item"><a href="/src/html/">Cenovnik</a></li>
         <li class="item"><a href="#">Česta pitanja</a></li>
         <li class="item"><a href="#">Galerija</a></li>
         <li class="item"><a href="#">Kontakt</a></li>
@@ -104,11 +106,11 @@
         <div class="carousel-slide">
           <img
             srcset="
-              src\images\carousel\slide1.jpg-600.jpg   480w,
-              src\images\carousel\slide1.jpg-1000.jpg 1000w
+              src/images/carousel/slide1.jpg-600.jpg   480w,
+              src/images/carousel/slide1.jpg-1000.jpg 1000w
             "
             sizes="(max-width: 600px) 600px, 1000px"
-            src=" src\images\carousel\slide1.jpg"
+            src=" src/images/carousel/slide1.jpg"
             loading="lazy"
             alt="CHANGE alt tekst here"
           />
@@ -121,11 +123,11 @@
         <div class="carousel-slide">
           <img
             srcset="
-              src\images\carousel\slide2.jpg-600.jpg   480w,
-              src\images\carousel\slide2.jpg-1000.jpg 1000w
+              src/images/carouselslide2.jpg-600.jpg    480w,
+              src/images/carousel/slide2.jpg-1000.jpg 1000w
             "
             sizes="(max-width: 600px) 600px, 1000px"
-            src=" src\images\carousel\slide2.jpg"
+            src=" src/images/carousel/slide2.jpg"
             loading="lazy"
             alt="CHANGE alt tekst here"
           />
@@ -137,23 +139,14 @@
         <div class="carousel-slide">
           <img
             srcset="
-              src\images\carousel\slide3.jpg-600.jpg   480w,
-              src\images\carousel\slide3.jpg-1000.jpg 1000w
+              src/images/carousel/slide3.jpg-600.jpg   480w,
+              src/images/carousel/slide3.jpg-1000.jpg 1000w
             "
             sizes="(max-width: 600px) 600px, 1000px"
-            src=" src\images\carousel\slide3.jpg"
+            src=" src/images/carousel/slide3.jpg"
             loading="lazy"
             alt="pas leži na tepihu"
           />
-          <!-- <img
-            srcset="
-              src\images\carousel\slide1.jpg-600.jpg   480w,
-              src\images\carousel\slide1.jpg-1000.jpg 1000w
-            "
-            
-            src="./src/images/carousel/slide3.jpg"
-          />
-          -->
           <div class="carousel-text">
             Kvalitetna usluga koju svi prepoznaju.
           </div>
@@ -164,7 +157,7 @@
           <table class="services-table">
             <thead>
               <tr>
-                <th>Usluge</th>
+                <th>Cenovnik</th>
               </tr>
             </thead>
             <tbody>
@@ -218,13 +211,9 @@
         <div class="services-calc slide-in from-right" role="form">
           <h2>Kalkulator usluga</h2>
           <form class="services-calc-form" aria-label="Kalkulator usluga">
-            <label aria-required="true"> Koju ste uslugu koristili? </label>
+            <label> Koju ste uslugu koristili? </label>
 
-            <select
-              required
-              class="select-calc"
-              aria-placeholder="Izaberite uslugu"
-            >
+            <select required class="select-calc">
               <option disabled selected value=""
                 >&mdash; izaberite uslugu &mdash;
               </option>
@@ -234,8 +223,9 @@
             </select>
 
             <label> m<sup>2</sup>/kom: </label>
-            <input type="number" class="calc-form-input" autocorrect="off" />
+            <input type="number" class="calc-form-input" />
             <button id="calculate" class="btn-primary">Izračunaj!</button>
+            <p class="form-note">*Minimum za naplatu je 5m <sup>2</sup></p>
           </form>
 
           <p class="result-span">
@@ -312,7 +302,6 @@
           <iframe
             class="map-iframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.5845190416967!2d21.33418791559655!3d43.57353987912394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM0JzI0LjciTiAyMcKwMjAnMTEuMCJF!5e0!3m2!1sen!2srs!4v1622041832336!5m2!1sen!2srs"
-            allowfullscreen="false"
             loading="lazy"
           ></iframe>
         </section>
