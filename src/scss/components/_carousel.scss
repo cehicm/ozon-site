@@ -15,9 +15,11 @@
         height: inherit;
         object-fit: cover;
     }
-
-    @include mixins.breakpoint(laptop) {
+    @include mixins.breakpoint(phablet) {
         height: 55vh;
+    }
+    @include mixins.breakpoint(laptop) {
+        height: 77vh;
     }
 }
 

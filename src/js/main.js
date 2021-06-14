@@ -106,13 +106,13 @@ const calculateServices = (evt) => {
 calcBtn.addEventListener("click", calculateServices);
 
 //slideshow
-// $(".carousel > div:gt(0)").hide();
+$(".carousel > div:gt(0)").hide();
 
-// setInterval(function () {
-//   $(".carousel > div:first")
-//     .fadeOut(4000)
-//     .next()
-//     .fadeIn(4000)
-//     .end()
-//     .appendTo(".carousel");
-// }, 4000);
+setInterval(function () {
+  $(".carousel > div:first")
+    .fadeOut(4000)
+    .next()
+    .fadeIn(4000)
+    .end()
+    .appendTo(".carousel");
+}, 4000);

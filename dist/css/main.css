@@ -528,9 +528,14 @@ th {
   height: inherit;
   object-fit: cover;
 }
-@media (min-width: 64rem) {
+@media (min-width: 37.5rem) {
   .carousel {
     height: 55vh;
+  }
+}
+@media (min-width: 64rem) {
+  .carousel {
+    height: 77vh;
   }
 }
 
