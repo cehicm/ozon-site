@@ -64,6 +64,7 @@
         margin-bottom: 15px;
         border-bottom: 1px solid dashed;
         background-color: #ebbf7d;
+        animation: hide-me 3s;
 
         .quote-icon {
             height: 1rem;
@@ -96,6 +97,21 @@
             color: #4a4646;
             padding: 6px;
         }
+    }
+}
+
+.hide-review {
+    display: none;
+}
+
+@keyframes hide-me {
+    from {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0vw);
     }
 }
 

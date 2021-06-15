@@ -1,7 +1,6 @@
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
 const items = document.querySelectorAll(".item");
-const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 const calcBtn = document.getElementById("calculate");
 
@@ -23,22 +22,17 @@ const appearOnScroll = new IntersectionObserver(function (
 },
 appearOptions);
 
-faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
-
 sliders.forEach((slider) => {
   appearOnScroll.observe(slider);
 });
 
 // Toggle mobile menu
-
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
     toggle.querySelector(
       "a"
-    ).innerHTML = ` <svg class="bars-icon" viewBox="0 0 100 80">
+    ).innerHTML = `<svg class="bars-icon" viewBox="0 0 100 80">
     <rect width="100" height="20"></rect>
     <rect y="30" width="100" height="20"></rect>
     <rect y="60" width="100" height="20"></rect>
@@ -49,7 +43,7 @@ function toggleMenu() {
       "a"
     ).innerHTML = `<svg viewBox="0 0 40 40" enable-background="new 0 0 40 40">
     <line class="close-icon" x1="15" y1="15" x2="25" y2="25"></line>
-    <line class="close-icon" x1="25" y1="15" x2="15" y2="25" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-miterlimit="10"></line>    
+    <line class="close-icon" x1="25" y1="15" x2="15" y2="25" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-miterlimit="10"></line>
   </path>
   </svg>`;
   }
@@ -60,10 +54,8 @@ function toggleItem() {
   this.classList.contains("submenu-active")
     ? this.classList.remove("submenu-active")
     : menu.querySelector(".submenu-active")
-    ? menu
-        .querySelector(".submenu-active")
-        .classList.remove("submenu-active") &&
-      this.classList.add("submenu-active")
+    ? (menu.querySelector(".submenu-active").classList.remove("submenu-active"),
+      this.classList.add("submenu-active"))
     : this.classList.add("submenu-active");
 }
 
@@ -86,6 +78,18 @@ for (let item of items) {
 }
 document.addEventListener("click", closeSubmenu, false);
 
+//slideshow
+// $(".carousel > div:gt(0)").hide();
+
+// setInterval(function () {
+//   $(".carousel > div:first")
+//     .fadeOut(4000)
+//     .next()
+//     .fadeIn(4000)
+//     .end()
+//     .appendTo(".carousel");
+// }, 4000);
+
 //Calculator
 const calculateServices = (evt) => {
   evt.preventDefault();
@@ -105,14 +109,33 @@ const calculateServices = (evt) => {
 
 calcBtn.addEventListener("click", calculateServices);
 
-//slideshow
-$(".carousel > div:gt(0)").hide();
+const showHideContent = () => {
+  const hiddenReviews = document.getElementById("hidden-reviews");
+  const updatedContent = document.getElementById("updated-content");
+  const newReviewText = `
+  <p class="review-content">
+  <object class="quote-icon"data="./src/images/SVG/quote-left-solid.svg" type="image/svg+xml"></object>
+  Vrhunska usluga!! Tačni i profesionalni. S.S<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/svg+xml"></object></p>
+  
+  <p class="review-content">
+  <object class="quote-icon"data="./src/images/SVG/quote-left-solid.svg" type="image/svg+xml"></object>
+  Vrhunska usluga!! Tačni i profesionalni. S.S<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/svg+xml"></object></p>
+  
+  <p class="review-content">
+  <object class="quote-icon"data="./src/images/SVG/quote-left-solid.svg" type="image/svg+xml"></object>
+  Vrhunska usluga!! Tačni i profesionalni. S.S<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/svg+xml"></object></p>`;
 
-setInterval(function () {
-  $(".carousel > div:first")
-    .fadeOut(4000)
-    .next()
-    .fadeIn(4000)
-    .end()
-    .appendTo(".carousel");
-}, 4000);
+  !hiddenReviews.classList.contains("hide-review")
+    ? (hiddenReviews.classList.add("hide-review"),
+      (updatedContent.innerHTML = newReviewText))
+    : hiddenReviews.classList.contains("hide-review")
+    ? (hiddenReviews.classList.remove("hide-review"),
+      updatedContent.classList.add("hide-review"))
+    : false;
+
+  hiddenReviews.classList.contains("hide-review")
+    ? updatedContent.classList.remove("hide-review")
+    : false;
+};
+
+setInterval(showHideContent, 6000);
