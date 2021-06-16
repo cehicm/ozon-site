@@ -79,16 +79,19 @@ for (let item of items) {
 document.addEventListener("click", closeSubmenu, false);
 
 //slideshow
-$(".carousel > div:gt(0)").hide();
 
-setInterval(function () {
-  $(".carousel > div:first")
-    .fadeOut(4000)
-    .next()
-    .fadeIn(4000)
-    .end()
-    .appendTo(".carousel");
-}, 4000);
+if (screen.width > 500) {
+  $(".carousel > div:gt(0)").hide();
+
+  setInterval(function () {
+    $(".carousel > div:first")
+      .fadeOut(4000)
+      .next()
+      .fadeIn(4000)
+      .end()
+      .appendTo(".carousel");
+  }, 4000);
+}
 
 //Calculator
 const calculateServices = (evt) => {
@@ -123,7 +126,7 @@ const showHideContent = () => {
   
   <p class="review-content">
   <object class="quote-icon"data="./src/images/SVG/quote-left-solid.svg" type="image/svg+xml"></object>
-  Vrhunska usluga!! Tačni i profesionalni. S.S<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/svg+xml"></object></p>`;
+  Vrhunska usluga!! Tačni i profesionalni. S.S<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/sgvg+xml"></object></p>`;
 
   !hiddenReviews.classList.contains("hide-review")
     ? (hiddenReviews.classList.add("hide-review"),

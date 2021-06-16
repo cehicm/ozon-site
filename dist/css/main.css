@@ -384,11 +384,6 @@ th {
     font-size: 1.3rem;
   }
 }
-@media (min-width: 50rem) {
-  .footer-main {
-    font-size: 1.9rem;
-  }
-}
 @media (min-width: 64rem) {
   .footer-main {
     font-size: 1.6rem;
@@ -400,28 +395,33 @@ th {
   }
 }
 
-.hours-span {
+.hours-span,
+.services-price-span {
   display: block;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 0.9rem;
 }
 @media (min-width: 37.5rem) {
-  .hours-span {
+  .hours-span,
+.services-price-span {
     font-size: 1.2rem;
   }
 }
 @media (min-width: 50rem) {
-  .hours-span {
+  .hours-span,
+.services-price-span {
     font-size: 1.6rem;
   }
 }
 @media (min-width: 64rem) {
-  .hours-span {
+  .hours-span,
+.services-price-span {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 130rem) {
-  .hours-span {
+  .hours-span,
+.services-price-span {
     font-size: 2rem;
   }
 }
@@ -447,15 +447,48 @@ th {
   }
 }
 
-.pranje-mebla-heading {
+.services-page-heading,
+.services-page h4 {
   font-family: "Poppins", Verdana, Geneva, sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   text-align: left;
 }
-.pranje-mebla-text {
+@media (min-width: 37.5rem) {
+  .services-page-heading,
+.services-page h4 {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 64rem) {
+  .services-page-heading,
+.services-page h4 {
+    font-size: 1.9rem;
+  }
+}
+.services-page-text,
+.services-page ul {
   font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
   font-weight: 200;
+}
+@media (min-width: 37.5rem) {
+  .services-page-text,
+.services-page ul {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 50rem) {
+  .services-page-text,
+.services-page ul {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 50rem) {
+  .services-page-text,
+.services-page ul {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 }
 
 .btn-primary {
@@ -589,7 +622,7 @@ header {
 }
 
 .flex-header {
-  background-color: #cddeef;
+  background-color: #ffffff;
   column-gap: 70px;
   padding: 10px 0;
 }
@@ -653,7 +686,6 @@ nav {
 }
 .menu .bars-icon {
   width: 1rem;
-  height: 1rem;
   fill: #ffffff;
 }
 @media (min-width: 37.5rem) {
@@ -664,10 +696,8 @@ nav {
 }
 .menu .close-icon {
   box-sizing: border-box;
-  width: 3rem;
-  height: 3rem;
   stroke: #ffffff;
-  stroke-width: 2.5px;
+  stroke-width: 1.7px;
   stroke-linecap: round;
   stroke-miterlimit: 10;
 }
@@ -676,7 +706,7 @@ nav {
 }
 .menu .arrow-down {
   width: 1rem;
-  height: 100%;
+  height: 0.6rem;
 }
 @media (min-width: 37.5rem) {
   .menu .arrow-down {
@@ -971,7 +1001,8 @@ nav {
 .services-calc,
 .services-calc-form,
 .review,
-.footer-main {
+.footer-main,
+.services-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1269,20 +1300,59 @@ nav {
   }
 }
 
-.services-img {
-  padding: 20px;
-}
-.services-img-single {
-  height: 30vh;
-  width: 90vw;
+.services-header-img {
+  object-fit: cover;
+  width: 100vw;
+  height: 40vh;
 }
 
-.pranje-mebla {
+.services-page-container .services-page {
   text-align: left;
 }
-.pranje-mebla-heading {
-  padding: 0px 20px 20px;
+@media (min-width: 50rem) {
+  .services-page-container .services-page {
+    width: 90vw;
+  }
 }
-.pranje-mebla-text {
+.services-page-container .services-page-heading {
+  padding: 20px;
+}
+.services-page-container .services-page-text {
   padding: 0px 20px;
+}
+.services-page-container .services-page-text-bold {
+  font-weight: 800;
+  display: block;
+}
+.services-page-container .services-page-text-span {
+  display: block;
+  font-weight: 800;
+  text-align: -webkit-center;
+  padding: 15px 0;
+}
+.services-page-container .services-page-list {
+  list-style: inside;
+  padding: 5px 20px;
+}
+.services-page-container .services-page-img {
+  padding: 15px;
+}
+@media (min-width: 37.5rem) {
+  .services-page-container .services-page-img {
+    padding: 25px 0;
+  }
+}
+.services-page-container .services-page-img-single {
+  height: 30vh;
+  width: 90vw;
+  object-fit: cover;
+}
+@media (min-width: 37.5rem) {
+  .services-page-container .services-page-img-single {
+    height: 40vh;
+    padding: 0;
+  }
+}
+.services-page-container .services-page h4 {
+  padding: 15px;
 }

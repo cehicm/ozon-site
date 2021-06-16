@@ -53,5 +53,9 @@
         @media (min-width: 37.5rem) {
             @content;
         }
+    } @else if $point == mobileonly {
+        @media (min-width: 30em) {
+            @content;
+        }
     }
 }
