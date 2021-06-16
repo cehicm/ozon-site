@@ -126,7 +126,8 @@ const showHideContent = () => {
   
   <p class="review-content">
   <object class="quote-icon"data="./src/images/SVG/quote-left-solid.svg" type="image/svg+xml"></object>
-  Vrhunska usluga!! Tačni i profesionalni. S.S<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/sgvg+xml"></object></p>`;
+  Vrhunska usluga!! Tačni i profesionalni. S.S<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/svg+xml"></object></p>
+  `;
 
   !hiddenReviews.classList.contains("hide-review")
     ? (hiddenReviews.classList.add("hide-review"),
