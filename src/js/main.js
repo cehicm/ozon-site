@@ -112,46 +112,42 @@ const calculateServices = (evt) => {
 
 calcBtn.addEventListener("click", calculateServices);
 
-const showHideContent = (event) => {
-  event.preventDefault();
-
+const showHideContent = () => {
   const hiddenReviews = document.getElementById("hidden-reviews");
   const updatedContent = document.getElementById("updated-content");
 
-  let newReviewText = [
-    `<p class="review-content">
+  let newReviewText = ` <p class="review-content">
   <object
     class="quote-icon"
     data="./src/images/SVG/level-down-alt-solid.svg"
     type="image/svg+xml"
   ></object>
- AA
+  Vrhunska usluga!! Tačni i profesionalni. S.S
   <object
     class="quote-icon"
     data="./src/images/SVG/level-up-alt-solid.svg"
     type="image/svg+xml"
   ></object>
-</p>`,
-    `<p class="review-content">
-<object
-  class="quote-icon"
-  data="./src/images/SVG/level-down-alt-solid.svg"
-  type="image/svg+xml"
-></object>
-BB
-<object
-  class="quote-icon"
-  data="./src/images/SVG/level-up-alt-solid.svg"
-  type="image/svg+xml"
-></object>
-</p>`,
-  ];
+</p>
+<p class="review-content">
+  <object
+    class="quote-icon"
+    data="./src/images/SVG/level-down-alt-solid.svg"
+    type="image/svg+xml"
+  ></object>
+  Vrhunska usluga!! Tačni i profesionalni. S.S
+  <object
+    class="quote-icon"
+    data="./src/images/SVG/level-up-alt-solid.svg"
+    type="image/svg+xml"
+  ></object>
+</p>
+`;
+  // for (review of newReviewText) {
+  //   let addedReview = document.querySelector(".added-review");
 
-  for (review of newReviewText) {
-    let addedReview = document.querySelector(".added-review");
-
-    addedReview.innerHTML = review;
-  }
+  //   addedReview.innerHTML = review;
+  // }
 
   //.append() ?
 
@@ -161,19 +157,18 @@ BB
   //   console.log(review);
   //   const addedReview = document.querySelector(".added-review");
   //   addedReview.innerHTML = review;
-
-  //   //   !hiddenReviews.classList.contains("hide-review")
-  //   //     ? (hiddenReviews.classList.add("hide-review"),
-  //   //       (updatedContent.innerHTML = newReviewText))
-  //   //     : hiddenReviews.classList.contains("hide-review")
-  //   //     ? (hiddenReviews.classList.remove("hide-review"),
-  //   //       updatedContent.classList.add("hide-review"))
-  //   //     : false;
-
-  //   //   hiddenReviews.classList.contains("hide-review")
-  //   //     ? updatedContent.classList.remove("hide-review")
-  //   //     : false;
   // }
+  !hiddenReviews.classList.contains("hide-review")
+    ? (hiddenReviews.classList.add("hide-review"),
+      (updatedContent.innerHTML = newReviewText))
+    : hiddenReviews.classList.contains("hide-review")
+    ? (hiddenReviews.classList.remove("hide-review"),
+      updatedContent.classList.add("hide-review"))
+    : false;
+
+  hiddenReviews.classList.contains("hide-review")
+    ? updatedContent.classList.remove("hide-review")
+    : false;
 };
 
 setInterval(showHideContent, 3000);
