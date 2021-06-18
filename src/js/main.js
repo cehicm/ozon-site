@@ -80,18 +80,18 @@ document.addEventListener("click", closeSubmenu, false);
 
 //slideshow
 
-if (screen.width > 500) {
-  $(".carousel > div:gt(0)").hide();
+// if (screen.width > 500) {
+//   $(".carousel > div:gt(0)").hide();
 
-  setInterval(function () {
-    $(".carousel > div:first")
-      .fadeOut(4000)
-      .next()
-      .fadeIn(4000)
-      .end()
-      .appendTo(".carousel");
-  }, 4000);
-}
+//   setInterval(function () {
+//     $(".carousel > div:first")
+//       .fadeOut(4000)
+//       .next()
+//       .fadeIn(4000)
+//       .end()
+//       .appendTo(".carousel");
+//   }, 4000);
+// }
 
 //Calculator
 const calculateServices = (evt) => {
@@ -112,7 +112,9 @@ const calculateServices = (evt) => {
 
 calcBtn.addEventListener("click", calculateServices);
 
-const showHideContent = () => {
+const showHideContent = (event) => {
+  event.preventDefault();
+
   const hiddenReviews = document.getElementById("hidden-reviews");
   const updatedContent = document.getElementById("updated-content");
 
@@ -146,7 +148,6 @@ BB
   ];
 
   for (review of newReviewText) {
-    console.log(review);
     let addedReview = document.querySelector(".added-review");
 
     addedReview.innerHTML = review;

@@ -33,10 +33,10 @@ th {
 h2,
 thead,
 th {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 64rem) {
   h1,
 h2,
 thead,
@@ -81,18 +81,6 @@ th {
   line-height: 1;
   text-align: center;
 }
-@media (min-width: 37.5rem) {
-  .flex-contact-info p,
-.flex-contact-info a {
-    font-size: 1.3rem;
-  }
-}
-@media (min-width: 50rem) {
-  .flex-contact-info p,
-.flex-contact-info a {
-    font-size: 1.7rem;
-  }
-}
 @media (min-width: 64rem) {
   .flex-contact-info p,
 .flex-contact-info a {
@@ -134,11 +122,6 @@ th {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 37.5rem) {
-  .menu .toggle {
-    text-align: right;
-  }
-}
 
 .has-submenu i {
   font-size: 0.63rem;
@@ -150,17 +133,13 @@ th {
 }
 @media (min-width: 37.5rem) {
   .toggle {
-    font-size: 1.8rem;
-  }
-}
-@media (min-width: 50rem) {
-  .toggle {
-    font-size: 2rem;
+    text-align: right;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 64rem) {
   .toggle {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 
@@ -192,10 +171,10 @@ th {
 }
 @media (min-width: 37.5rem) {
   .carousel-text {
-    font-size: 2.35rem;
+    font-size: 2rem;
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 64rem) {
   .carousel-text {
     font-size: 2.7rem;
   }
@@ -212,12 +191,12 @@ th {
 }
 @media (min-width: 37.5rem) {
   .services-table {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 64rem) {
   .services-table {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 130rem) {
@@ -234,9 +213,9 @@ th {
 .services-calc .services-calc-form .calc-form-input {
   font-size: 1rem;
 }
-@media (min-width: 37.5rem) {
+@media (min-width: 64rem) {
   .services-calc .services-calc-form .calc-form-input {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 130rem) {
@@ -246,22 +225,15 @@ th {
 }
 .services-calc .services-calc-form label {
   font-weight: 400;
-  line-height: 2;
-}
-@media (min-width: 37.5rem) {
-  .services-calc .services-calc-form label {
-    font-size: 1.3rem;
-    line-height: 4;
-  }
 }
 @media (min-width: 50rem) {
   .services-calc .services-calc-form label {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 64rem) {
   .services-calc .services-calc-form label {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 130rem) {
@@ -280,14 +252,7 @@ th {
   font-size: 0.8rem;
   font-weight: 400;
 }
-@media (min-width: 37.5rem) {
-  .services-calc .services-calc-form .select-calc,
-.services-calc .services-calc-form .select-calc:invalid,
-.services-calc .services-calc-form option {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 50rem) {
+@media (min-width: 64rem) {
   .services-calc .services-calc-form .select-calc,
 .services-calc .services-calc-form .select-calc:invalid,
 .services-calc .services-calc-form option {
@@ -304,13 +269,12 @@ th {
 .services-calc .result-span {
   color: #3f51b5;
 }
-@media (min-width: 37.5rem) {
+@media (min-width: 50rem) {
   .services-calc .result-span {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 64rem) {
   .services-calc .result-span {
     font-size: 1.4rem;
   }
@@ -328,12 +292,7 @@ th {
   font-size: 0.9rem;
   line-height: 1.4;
 }
-@media (min-width: 37.5rem) {
-  .about-us-text {
-    font-size: 1.3rem;
-  }
-}
-@media (min-width: 50rem) {
+@media (min-width: 64rem) {
   .about-us-text {
     font-size: 1.5rem;
   }
@@ -351,7 +310,6 @@ th {
 }
 @media (min-width: 37.5rem) {
   .review-content {
-    font-size: 1.3rem;
     font-weight: 400;
   }
 }
@@ -404,16 +362,10 @@ th {
 @media (min-width: 37.5rem) {
   .hours-span,
 .services-price-span {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 50rem) {
-  .hours-span,
-.services-price-span {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 64rem) {
   .hours-span,
 .services-price-span {
     font-size: 1.3rem;
@@ -429,16 +381,6 @@ th {
 .btn-primary {
   font-family: "Poppins";
   color: #333333;
-}
-@media (min-width: 37.5rem) {
-  .btn-primary {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 50rem) {
-  .btn-primary {
-    font-size: 1.2rem;
-  }
 }
 @media (min-width: 130rem) {
   .btn-primary {
@@ -491,6 +433,40 @@ th {
   }
 }
 
+.faq-container-heading {
+  font-family: "Poppins", Verdana, Geneva, sans-serif;
+}
+.faq-container-text {
+  font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
+  font-weight: 200;
+}
+
+.contact-container {
+  width: 90vw;
+}
+.contact-container .contact-card {
+  border: 1px solid #333333;
+  padding: 20px 0;
+}
+.contact-container .contact-card p {
+  font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
+  font-weight: 200;
+  font-weight: 600;
+}
+@media (min-width: 37.5rem) {
+  .contact-container .contact-card p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 64rem) {
+  .contact-container .contact-card p {
+    font-size: 1.7rem;
+  }
+}
+.contact-container .contact-card p a {
+  color: #3f51b5;
+}
+
 .btn-primary {
   padding: 10px 15px;
   overflow: hidden;
@@ -504,7 +480,7 @@ th {
     padding: 15px 20px;
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 64rem) {
   .btn-primary {
     padding: 20px 25px;
   }
@@ -652,12 +628,17 @@ header {
 }
 @media (min-width: 37.5rem) {
   .flex-header .header-image {
-    height: 7vh;
+    height: 9vh;
+  }
+}
+@media (min-width: 50rem) {
+  .flex-header .header-image {
+    height: 11vh;
   }
 }
 @media (min-width: 64rem) {
   .flex-header .header-image {
-    height: 8vh;
+    height: 12vh;
   }
 }
 
@@ -837,7 +818,6 @@ nav {
   }
   .services-container .services-calc h2 {
     padding: 35px;
-    margin-top: 15px;
   }
 }
 @media (min-width: 37.5rem) and (min-width: 64rem) {
@@ -874,25 +854,18 @@ nav {
   .services-calc-form {
     padding: 40px;
     height: 65vh;
-    width: 60vw;
   }
 }
 @media (min-width: 50rem) {
   .services-calc-form {
-    width: 64vw;
     padding: 30px;
-  }
-}
-@media (min-width: 64rem) {
-  .services-calc-form {
-    height: 75vh;
-    width: 35vw;
+    height: 80vh;
+    width: 40vw;
   }
 }
 @media (min-width: 130rem) {
   .services-calc-form {
     height: 44vh;
-    width: 29vw;
   }
 }
 .services-calc-form .select-calc {
@@ -1002,7 +975,8 @@ nav {
 .services-calc-form,
 .review,
 .footer-main,
-.services-page {
+.services-page,
+.faq-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1057,6 +1031,12 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
   }
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
 }
 
 @media (min-width: 64rem) {
@@ -1152,6 +1132,7 @@ nav {
 .about-us {
   margin: 30px 0;
   border-bottom: 1px solid #333333;
+  width: 80vw;
 }
 @media (min-width: 50rem) {
   .about-us {
@@ -1176,16 +1157,6 @@ nav {
 }
 .about-us-text {
   padding: 20px 0px 30px 0px;
-}
-@media (min-width: 37.5rem) {
-  .about-us-text {
-    padding: 30px 0 70px;
-  }
-}
-@media (min-width: 50rem) {
-  .about-us-text {
-    padding: 49px 0 90px;
-  }
 }
 .review {
   text-align: center;
@@ -1276,6 +1247,12 @@ nav {
   .map-location {
     height: inherit;
     overflow: hidden;
+    width: 80vw;
+  }
+}
+@media (min-width: 50rem) {
+  .map-location {
+    width: 50vw;
   }
 }
 @media (min-width: 64rem) {
@@ -1355,4 +1332,34 @@ nav {
 }
 .services-page-container .services-page h4 {
   padding: 15px;
+}
+
+.faq-container {
+  padding: 10px;
+  width: 90vw;
+}
+@media (min-width: 64rem) {
+  .faq-container {
+    width: 60vw;
+  }
+}
+.faq-container-text {
+  margin-top: 10px;
+}
+.faq-container .faq-call-us {
+  display: block;
+  padding-top: 15px;
+  font-weight: 800;
+}
+
+.gallery-container img {
+  object-fit: cover;
+  width: 100vw;
+  height: 50vh;
+}
+@media (min-width: 37.5rem) {
+  .gallery-container img {
+    width: 33%;
+    height: 15vh;
+  }
 }

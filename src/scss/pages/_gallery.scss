@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as mixins;
+
+.gallery-container {
+    img {
+        object-fit: cover;
+        width: 100vw;
+        height: 50vh;
+
+        @include mixins.breakpoint(phablet) {
+            width: 33%;
+            height: 15vh;
+        }
+    }
+}

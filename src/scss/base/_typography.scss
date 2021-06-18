@@ -22,10 +22,10 @@ th {
     @include mixins.headings-main-style;
     padding: 35px;
     @include mixins.breakpoint(phablet) {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
-    @include mixins.breakpoint(tablet) {
+    @include mixins.breakpoint(laptop) {
         font-size: 2.3rem;
     }
     @include mixins.breakpoint(ldesktop) {
@@ -57,14 +57,6 @@ th {
         font-size: 0.9rem;
         line-height: 1;
         text-align: center;
-
-        @include mixins.breakpoint(phablet) {
-            font-size: 1.3rem;
-        }
-
-        @include mixins.breakpoint(tablet) {
-            font-size: 1.7rem;
-        }
 
         @include mixins.breakpoint(laptop) {
             font-size: 1.3rem;
@@ -103,11 +95,6 @@ th {
             font-size: 1.5rem;
         }
     }
-    .toggle {
-        @include mixins.breakpoint(phablet) {
-            text-align: right;
-        }
-    }
 }
 
 .has-submenu i {
@@ -118,15 +105,13 @@ th {
     font-family: "Open Sans", "Courier New", Courier, monospace;
     font-size: 1.2rem;
     @include mixins.breakpoint(phablet) {
-        font-size: 1.8rem;
-    }
+        text-align: right;
 
-    @include mixins.breakpoint(tablet) {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     @include mixins.breakpoint(laptop) {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 }
 
@@ -153,9 +138,9 @@ th {
     font-size: 1.4rem;
     text-align: center;
     @include mixins.breakpoint(phablet) {
-        font-size: 2.35rem;
+        font-size: 2rem;
     }
-    @include mixins.breakpoint(tablet) {
+    @include mixins.breakpoint(laptop) {
         font-size: 2.7rem;
     }
     @include mixins.breakpoint(ldesktop) {
@@ -169,12 +154,13 @@ th {
     @include mixins.content-main-style;
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
-    @include mixins.breakpoint(tablet) {
-        font-size: 1.7rem;
+    @include mixins.breakpoint(laptop) {
+        font-size: 1.5rem;
     }
+
     @include mixins.breakpoint(ldesktop) {
         font-size: 2.5rem;
     }
@@ -189,8 +175,8 @@ th {
         .calc-form-input {
             font-size: 1rem;
 
-            @include mixins.breakpoint(phablet) {
-                font-size: 1.3rem;
+            @include mixins.breakpoint(laptop) {
+                font-size: 1.2rem;
             }
 
             @include mixins.breakpoint(ldesktop) {
@@ -200,18 +186,13 @@ th {
 
         label {
             font-weight: 400;
-            line-height: 2;
-            @include mixins.breakpoint(phablet) {
-                font-size: 1.3rem;
-                line-height: 4;
-            }
 
             @include mixins.breakpoint(tablet) {
-                font-size: 1.5rem;
+                font-size: 1rem;
             }
 
             @include mixins.breakpoint(laptop) {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
 
             @include mixins.breakpoint(ldesktop) {
@@ -231,10 +212,7 @@ th {
             font-size: 0.8rem;
             font-weight: 400;
 
-            @include mixins.breakpoint(phablet) {
-                font-size: 1rem;
-            }
-            @include mixins.breakpoint(tablet) {
+            @include mixins.breakpoint(laptop) {
                 font-size: 1.1rem;
             }
             @include mixins.breakpoint(ldesktop) {
@@ -244,12 +222,11 @@ th {
     }
     .result-span {
         color: #3f51b5;
-        @include mixins.breakpoint(phablet) {
-            font-size: 1.3rem;
-            font-weight: 600;
+        @include mixins.breakpoint(tablet) {
+            font-weight: 500;
         }
 
-        @include mixins.breakpoint(tablet) {
+        @include mixins.breakpoint(laptop) {
             font-size: 1.4rem;
         }
 
@@ -267,11 +244,7 @@ th {
         font-size: 0.9rem;
         line-height: 1.4;
 
-        @include mixins.breakpoint(phablet) {
-            font-size: 1.3rem;
-        }
-
-        @include mixins.breakpoint(tablet) {
+        @include mixins.breakpoint(laptop) {
             font-size: 1.5rem;
         }
         @include mixins.breakpoint(ldesktop) {
@@ -285,7 +258,6 @@ th {
     font-size: 0.9rem;
 
     @include mixins.breakpoint(phablet) {
-        font-size: 1.3rem;
         font-weight: 400;
     }
 
@@ -330,16 +302,13 @@ th {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 0.9rem;
     @include mixins.breakpoint(phablet) {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     @include mixins.breakpoint(tablet) {
-        font-size: 1.6rem;
-    }
-
-    @include mixins.breakpoint(laptop) {
         font-size: 1.3rem;
     }
+
     @include mixins.breakpoint(ldesktop) {
         font-size: 2rem;
     }
@@ -348,16 +317,8 @@ th {
 //Button
 .btn-primary {
     font-family: "Poppins";
-
     color: variables.$black;
 
-    @include mixins.breakpoint(phablet) {
-        font-size: 1rem;
-    }
-
-    @include mixins.breakpoint(tablet) {
-        font-size: 1.2rem;
-    }
     @include mixins.breakpoint(ldesktop) {
         font-size: 1.4rem;
         font-weight: 600;
@@ -365,6 +326,8 @@ th {
 }
 
 // Pages
+
+//Services
 .services-page {
     &-heading,
     h4 {
@@ -393,6 +356,40 @@ th {
         @include mixins.breakpoint(tablet) {
             font-size: 1.5rem;
             font-weight: 400;
+        }
+    }
+}
+
+//FAQ
+.faq-container {
+    &-heading {
+        font-family: "Poppins", Verdana, Geneva, sans-serif;
+    }
+
+    &-text {
+        @include mixins.content-main-style;
+    }
+}
+
+//Contact
+.contact-container {
+    width: 90vw;
+    .contact-card {
+        border: 1px solid variables.$black;
+        padding: 20px 0;
+
+        p {
+            @include mixins.content-main-style;
+            font-weight: 600;
+            @include mixins.breakpoint(phablet) {
+                font-size: 1.3rem;
+            }
+            @include mixins.breakpoint(laptop) {
+                font-size: 1.7rem;
+            }
+            a {
+                color: #3f51b5;
+            }
         }
     }
 }

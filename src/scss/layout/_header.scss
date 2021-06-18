@@ -34,10 +34,15 @@ header {
         height: 6vh;
         transform: translate(0%, 30%);
         @include mixins.breakpoint(phablet) {
-            height: 7vh;
+            height: 9vh;
         }
+
+        @include mixins.breakpoint(tablet) {
+            height: 11vh;
+        }
+
         @include mixins.breakpoint(laptop) {
-            height: 8vh;
+            height: 12vh;
         }
     }
 }
