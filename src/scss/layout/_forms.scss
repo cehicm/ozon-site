@@ -60,6 +60,8 @@
     }
 
     @include mixins.breakpoint(laptop) {
+        height: 65vh;
+        width: 30vw;
     }
     @include mixins.breakpoint(ldesktop) {
         height: 44vh;

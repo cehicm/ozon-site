@@ -215,12 +215,12 @@ th {
 }
 @media (min-width: 64rem) {
   .services-calc .services-calc-form .calc-form-input {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 130rem) {
   .services-calc .services-calc-form .calc-form-input {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }
 .services-calc .services-calc-form label {
@@ -861,6 +861,12 @@ nav {
     padding: 30px;
     height: 80vh;
     width: 40vw;
+  }
+}
+@media (min-width: 64rem) {
+  .services-calc-form {
+    height: 65vh;
+    width: 30vw;
   }
 }
 @media (min-width: 130rem) {
