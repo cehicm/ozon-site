@@ -344,7 +344,8 @@ th {
     }
 
     &-text,
-    ul {
+    &-list {
+        text-align: left;
         @include mixins.content-main-style;
         @include mixins.breakpoint(phablet) {
             font-size: 1.1rem;

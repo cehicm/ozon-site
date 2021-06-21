@@ -13,10 +13,6 @@ header {
     column-gap: 70px;
     padding: 10px 0;
 
-    @include mixins.breakpoint(phablet) {
-        padding: 10px 0;
-    }
-
     @include mixins.breakpoint(laptop) {
         gap: 358px;
     }
@@ -34,11 +30,12 @@ header {
         height: 6vh;
         transform: translate(0%, 30%);
         @include mixins.breakpoint(phablet) {
-            height: 9vh;
+            margin-bottom: 30px;
+            height: 8vh;
         }
 
         @include mixins.breakpoint(tablet) {
-            height: 11vh;
+            height: 9vh;
         }
 
         @include mixins.breakpoint(laptop) {

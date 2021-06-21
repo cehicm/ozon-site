@@ -36,6 +36,10 @@
         &-list {
             list-style: inside;
             padding: 5px 20px;
+
+            li {
+                list-style: inside;
+            }
         }
 
         &-img {
