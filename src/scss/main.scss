@@ -1,16 +1,13 @@
-// TO DO:
-// -- put all pointers in one place (default style for <i>s?
-
 //Normalize SCSS
 @use "base/normalize";
 
 //Base
-@use "./abstracts/mixins" as mixins;
-@use "./abstracts/variables" as variables;
-@use "./base/typography" as typography;
+@use "./abstracts/mixins";
+@use "./abstracts/variables";
+@use "./base/typography";
 
 //Components
-@use "./components/buttons" as btn;
+@use "./components/buttons";
 @use "./components/carousel";
 @use "./components/sliders";
 
@@ -24,7 +21,7 @@
 
 //Pages
 @use "./pages/home";
-@use "./pages/about";
 @use "./pages/services";
 @use "./pages/faq";
 @use "./pages/gallery";
+@use "./pages/price-list";

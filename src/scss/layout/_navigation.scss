@@ -16,6 +16,10 @@ nav {
             width: 1.5rem;
             height: 1.5rem;
         }
+
+        @include mixins.breakpoint(tablet) {
+            width: 1.2rem;
+        }
     }
 
     .close-icon {
@@ -51,7 +55,7 @@ nav {
 
         a {
             display: block;
-            padding: 15px 5px;
+            padding: 5px;
             color: variables.$white;
 
             @include mixins.breakpoint(laptop) {
@@ -99,19 +103,10 @@ nav {
             display: block;
             left: 0;
             position: absolute;
-            top: 74px;
             z-index: 1;
-            width: 18vw;
             text-align-last: left;
-
-            @include mixins.breakpoint(laptop) {
-                top: 88px;
-                width: 48vw;
-            }
-        }
-
-        .submenu-active {
-            border-radius: 0;
+            top: 88px;
+            width: 48vw;
         }
 
         .toggle {
@@ -126,22 +121,18 @@ nav {
 }
 
 .menu li.subitem a {
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .submenu {
     display: none;
-}
 
-.submenu-active {
-    background-color: #111;
-    border-radius: 3px;
+    &-active {
+        background-color: #111;
+        border-radius: 3px;
+    }
 }
 
 .submenu-active .submenu {
     display: block;
-}
-
-.subitem a {
-    padding: 10px 15px;
 }

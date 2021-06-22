@@ -30,25 +30,25 @@ th {
 }
 @media (min-width: 37.5rem) {
   h1,
-h2,
-thead,
-th {
+  h2,
+  thead,
+  th {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 64rem) {
   h1,
-h2,
-thead,
-th {
+  h2,
+  thead,
+  th {
     font-size: 2.3rem;
   }
 }
 @media (min-width: 130rem) {
   h1,
-h2,
-thead,
-th {
+  h2,
+  thead,
+  th {
     font-size: 3rem;
   }
 }
@@ -83,7 +83,7 @@ th {
 }
 @media (min-width: 64rem) {
   .flex-contact-info p,
-.flex-contact-info a {
+  .flex-contact-info a {
     font-size: 1.3rem;
     font-weight: 500;
     line-height: 28px;
@@ -91,7 +91,7 @@ th {
 }
 @media (min-width: 130rem) {
   .flex-contact-info p,
-.flex-contact-info a {
+  .flex-contact-info a {
     font-size: 2rem;
     font-weight: 500;
     line-height: 42px;
@@ -115,11 +115,6 @@ th {
 @media (min-width: 130rem) {
   .menu .item a {
     font-size: 2.2rem;
-  }
-}
-@media (min-width: 64rem) {
-  .menu .subitem a {
-    font-size: 1.5rem;
   }
 }
 
@@ -146,11 +141,7 @@ th {
 .item {
   font-size: 1rem;
 }
-@media (min-width: 37.5rem) {
-  .item {
-    font-size: 1.5rem;
-  }
-}
+
 @media (min-width: 50rem) {
   .item {
     font-size: 1.7rem;
@@ -254,15 +245,15 @@ th {
 }
 @media (min-width: 64rem) {
   .services-calc .services-calc-form .select-calc,
-.services-calc .services-calc-form .select-calc:invalid,
-.services-calc .services-calc-form option {
+  .services-calc .services-calc-form .select-calc:invalid,
+  .services-calc .services-calc-form option {
     font-size: 1.1rem;
   }
 }
 @media (min-width: 130rem) {
   .services-calc .services-calc-form .select-calc,
-.services-calc .services-calc-form .select-calc:invalid,
-.services-calc .services-calc-form option {
+  .services-calc .services-calc-form .select-calc:invalid,
+  .services-calc .services-calc-form option {
     font-size: 1.4rem;
   }
 }
@@ -361,19 +352,19 @@ th {
 }
 @media (min-width: 37.5rem) {
   .hours-span,
-.services-price-span {
+  .services-price-span {
     font-size: 1rem;
   }
 }
 @media (min-width: 50rem) {
   .hours-span,
-.services-price-span {
+  .services-price-span {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 130rem) {
   .hours-span,
-.services-price-span {
+  .services-price-span {
     font-size: 2rem;
   }
 }
@@ -398,33 +389,37 @@ th {
 }
 @media (min-width: 37.5rem) {
   .services-page-heading,
-.services-page h4 {
+  .services-page h4 {
     font-size: 1.4rem;
   }
 }
 @media (min-width: 64rem) {
   .services-page-heading,
-.services-page h4 {
+  .services-page h4 {
     font-size: 1.9rem;
   }
 }
-.services-page-text, .services-page-list {
+.services-page-text,
+.services-page-list {
   text-align: left;
   font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
   font-weight: 200;
 }
 @media (min-width: 37.5rem) {
-  .services-page-text, .services-page-list {
+  .services-page-text,
+  .services-page-list {
     font-size: 1.1rem;
   }
 }
 @media (min-width: 50rem) {
-  .services-page-text, .services-page-list {
+  .services-page-text,
+  .services-page-list {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 50rem) {
-  .services-page-text, .services-page-list {
+  .services-page-text,
+  .services-page-list {
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -1429,7 +1424,8 @@ nav {
   font-weight: bold;
   transition: 0.3s;
 }
-.modal-close:hover, .modal-close:focus {
+.modal-close:hover,
+.modal-close:focus {
   color: red;
   cursor: pointer;
 }
@@ -1443,4 +1439,8 @@ nav {
   color: #ccc;
   padding: 10px 0;
   height: 150px;
+}
+
+#price-list {
+  width: 80vw;
 }
