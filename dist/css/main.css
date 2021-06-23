@@ -1165,6 +1165,7 @@ nav {
   margin-bottom: 15px;
   padding: 35px;
   width: 90vw;
+  height: 10vh;
 }
 .review-content .quote-icon {
   height: 1rem;
@@ -1177,15 +1178,10 @@ nav {
 }
 @media (min-width: 37.5rem) {
   .review-content {
-    height: 10vh;
+    height: 15vh;
     margin-bottom: 15px;
     padding: 35px;
     width: 70vw;
-  }
-}
-@media (min-width: 50rem) {
-  .review-content {
-    height: 15vh;
   }
 }
 @media (min-width: 64rem) {

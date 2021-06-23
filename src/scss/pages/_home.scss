@@ -60,6 +60,7 @@
         margin-bottom: 15px;
         padding: 35px;
         width: 90vw;
+        height: 10vh;
 
         .quote-icon {
             height: 1rem;
@@ -70,14 +71,13 @@
         }
 
         @include mixins.breakpoint(phablet) {
-            height: 10vh;
+            height: 15vh;
             margin-bottom: 15px;
             padding: 35px;
             width: 70vw;
         }
 
         @include mixins.breakpoint(tablet) {
-            height: 15vh;
         }
 
         @include mixins.breakpoint(laptop) {
