@@ -9,10 +9,16 @@ Built with a preprocessor, normalized and optimized for all browsers. Uses flexb
 Javascript:
 Mostly used to add visual appeal to the page with a responsive toggle navbar,jQuery slideshow animation, scroll animations with IntersectionObserver and calculator for the services offered.
 
-Other: Using SVGs to reduce external assets and allow faster loading with fewer kbs wasted.
+Other: Using SVGs to reduce external assets and allow faster loading with fewer kbs wasted. Optimizing images for several screen sizes.
+
+Tools I use to make sure the site works for all people and screens:
+HTML validator
+is my site responsive
+is my site accesible
 
 The challenge(s):
 As a large project, it required a lot of research and troubleshooting different tools such as various NPM packages, Gulp, etc. Making sure the site works well with different devices, reduce load times, especially on mobile devices.
+
 
 #This is a work in progress.
 

@@ -44,8 +44,6 @@ function closeSubmenu(evt) {
   !isClickInside && menu.querySelector(".submenu-active")
     ? menu.querySelector(".submenu-active").classList.remove("submenu-active")
     : null;
-
-  toggle ? toggle.addEventListener("click", toggleMenu, false) : null;
 }
 
 for (let item of items) {
@@ -55,3 +53,5 @@ for (let item of items) {
   item.addEventListener("keypress", toggleItem, false);
 }
 document.addEventListener("click", closeSubmenu, false);
+
+toggle ? toggle.addEventListener("click", toggleMenu, false) : null;
