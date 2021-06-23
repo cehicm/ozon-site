@@ -13,12 +13,16 @@ nav {
         width: 1rem;
         fill: variables.$white;
         @include mixins.breakpoint(phablet) {
-            width: 1.5rem;
+            width: 1.2rem;
             height: 1.5rem;
         }
 
         @include mixins.breakpoint(tablet) {
-            width: 1.2rem;
+            width: 1.5rem;
+        }
+
+        @include mixins.breakpoint(laptop) {
+            width: 1.7rem;
         }
     }
 

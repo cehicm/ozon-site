@@ -102,7 +102,7 @@ th {
         font-size: 1.5rem;
     }
     @include mixins.breakpoint(tablet) {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 
     @include mixins.breakpoint(laptop) {

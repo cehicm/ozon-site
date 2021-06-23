@@ -133,7 +133,7 @@ th {
 }
 @media (min-width: 50rem) {
   .toggle {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 64rem) {
@@ -649,13 +649,18 @@ nav {
 }
 @media (min-width: 37.5rem) {
   .menu .bars-icon {
-    width: 1.5rem;
+    width: 1.2rem;
     height: 1.5rem;
   }
 }
 @media (min-width: 50rem) {
   .menu .bars-icon {
-    width: 1.2rem;
+    width: 1.5rem;
+  }
+}
+@media (min-width: 64rem) {
+  .menu .bars-icon {
+    width: 1.7rem;
   }
 }
 .menu .close-icon {
@@ -832,7 +837,7 @@ nav {
 }
 @media (min-width: 64rem) {
   .services-calc-form {
-    height: 45vh;
+    height: 55vh;
     width: 35vw;
   }
 }
@@ -1178,6 +1183,11 @@ nav {
     width: 70vw;
   }
 }
+@media (min-width: 50rem) {
+  .review-content {
+    height: 15vh;
+  }
+}
 @media (min-width: 64rem) {
   .review-content {
     width: 40vw;
@@ -1225,7 +1235,7 @@ nav {
 }
 @media (min-width: 50rem) {
   .map-location {
-    width: 50vw;
+    width: 100vw;
   }
 }
 @media (min-width: 64rem) {

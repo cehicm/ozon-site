@@ -76,6 +76,10 @@
             width: 70vw;
         }
 
+        @include mixins.breakpoint(tablet) {
+            height: 15vh;
+        }
+
         @include mixins.breakpoint(laptop) {
             width: 40vw;
             margin-right: 20px;
@@ -120,7 +124,7 @@
     }
 
     @include mixins.breakpoint(tablet) {
-        width: 50vw;
+        width: 100vw;
     }
 
     @include mixins.breakpoint(laptop) {
