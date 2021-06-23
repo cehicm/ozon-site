@@ -74,6 +74,6 @@ function watchTask() {
 }
 
 // Default Gulp Task
-exports.default = series(cssTask, babelTask, browsersyncServer, watchTask);
+// exports.default = series(cssTask, babelTask, browsersyncServer, watchTask);
 
-// exports.build = series(parallel(, cssTask));
+exports.build = series(babelTask, cssTask);
