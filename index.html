@@ -2,7 +2,6 @@
 <html lang="sr">
   <head>
     <link rel="icon" type="image/svg" href="./src/images/SVG/favicon.svg" />
-
     <link rel="stylesheet" href="./dist/css/main.min.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,7 +19,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1"
     />
-
+    <meta
+      name="description"
+      content="Početna stranica sajta Ozon tepih servisa iz Kruševca. Ozon nudi veliki asortiman usluga koji uključuje pranja tepiha, mebla, jorgana i tako dalje. Tradicija od 30 godina."
+    />
     <title>Ozon</title>
   </head>
   <body>
@@ -232,8 +234,14 @@
               <option value="140">Pranje tvrdih podova</option>
             </select>
 
-            <label> m<sup>2</sup>/kom: </label>
-            <input type="number" class="calc-form-input" />
+            <label title="m2"> m<sup>2</sup>/kom: </label>
+            <input
+              role="textbox"
+              type="number"
+              class="calc-form-input"
+              aria-placeholder="unos broja kvadrata ili količine usluga"
+              aria-required="true"
+            />
             <button id="calculate" class="btn-primary">Izračunaj!</button>
             <p class="form-note">*Minimum za naplatu je 5m <sup>2</sup></p>
           </form>
@@ -269,12 +277,14 @@
               class="quote-icon"
               data="./src/images/SVG/level-down-alt-solid.svg"
               type="image/svg+xml"
+              alt="dekorativna ikona"
             ></object>
             Vrhunska usluga!! Tačni i profesionalni. S.S
             <object
               class="quote-icon"
               data="./src/images/SVG/level-up-alt-solid.svg"
               type="image/svg+xml"
+              alt="dekorativna ikona"
             ></object>
           </p>
           <p class="review-content">
@@ -282,12 +292,14 @@
               class="quote-icon"
               data="./src/images/SVG/level-down-alt-solid.svg"
               type="image/svg+xml"
+              alt="dekorativna ikona"
             ></object>
             Sve pohvale, brzo, kvalitetno. I.L.
             <object
               class="quote-icon"
               data="./src/images/SVG/level-up-alt-solid.svg"
               type="image/svg+xml"
+              alt="dekorativna ikona"
             ></object>
           </p>
         </div>
@@ -297,6 +309,7 @@
       <div class="desktop-footer">
         <section class="map-location">
           <iframe
+            title="Gugl mapa lokacije"
             class="map-iframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.5845190416967!2d21.33418791559655!3d43.57353987912394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM0JzI0LjciTiAyMcKwMjAnMTEuMCJF!5e0!3m2!1sen!2srs!4v1622041832336!5m2!1sen!2srs"
             loading="lazy"

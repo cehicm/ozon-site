@@ -837,13 +837,8 @@ nav {
 }
 @media (min-width: 64rem) {
   .services-calc-form {
-    height: 55vh;
+    height: 65vh;
     width: 35vw;
-  }
-}
-@media (min-width: 130rem) {
-  .services-calc-form {
-    height: 44vh;
   }
 }
 .services-calc-form .select-calc {
