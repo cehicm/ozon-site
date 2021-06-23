@@ -60,18 +60,17 @@ calcBtn.addEventListener("click", calculateServices);
 //.append() ?
 
 //break the array appart and then push it into the box?
-
 const showHideContent = () => {
   const hiddenReviews = document.getElementById("hidden-reviews");
   const updatedContent = document.getElementById("updated-content");
   const newReviewText = `
       <p class="review-content">
-      <object class="quote-icon"data="./src/images/SVG/quote-left-solid.svg" type="image/svg+xml"></object>
-      Brzi korektni,laki za dogovor. D.M.<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/svg+xml"></object></p>
+      <object class="quote-icon" data="/src/images/SVG/level-down-alt-solid.svg" type="image/svg+xml"></object>
+      Brzi korektni,laki za dogovor. D.M.<object class="quote-icon" data="src/images/SVG/level-up-alt-solid.svg" type="image/svg+xml"></object></p>
 
       <p class="review-content">
-      <object class="quote-icon"data="./src/images/SVG/quote-left-solid.svg" type="image/svg+xml"></object>
-      Godinama isključivo ovde perem tepihe. Profesionalna usluga i korektne cene. S.C.<object class="quote-icon" data="./src/images/SVG/quote-right-solid.svg" type="image/svg+xml"></object></p>`;
+      <object class="quote-icon" data="/src/images/SVG/level-down-alt-solid.svg" type="image/svg+xml"></object>
+      Godinama isključivo ovde perem tepihe. Profesionalna usluga i korektne cene. S.C.<object class="quote-icon" data="src/images/SVG/level-up-alt-solid.svg" type="image/svg+xml"></object></p>`;
 
   !hiddenReviews.classList.contains("hide-review")
     ? (hiddenReviews.classList.add("hide-review"),
@@ -86,4 +85,4 @@ const showHideContent = () => {
     : false;
 };
 
-setInterval(showHideContent, 6000);
+// setInterval(showHideContent, 6000);
