@@ -38,7 +38,7 @@ function cssTask(cb) {
 
 //Javascript tasks
 async function babelTask() {
-  src("src/js/main.js")
+  src("src/js/**/*.js")
     .pipe(
       babel({
         presets: ["@babel/preset-env"],
@@ -74,6 +74,6 @@ function watchTask() {
 }
 
 // Default Gulp Task
-exports.default = series(cssTask, browsersyncServer, watchTask, babelTask);
+exports.default = series(cssTask, babelTask, browsersyncServer, watchTask);
 
 // exports.build = series(parallel(, cssTask));

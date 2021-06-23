@@ -45,23 +45,25 @@
     width: 80vw;
     padding: 14px;
     margin-top: 10px;
-    background-color: #cddeef;
+    color: white;
+    background-color: variables.$blue;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     @include mixins.breakpoint(phablet) {
         padding: 40px;
-        height: 65vh;
+        height: 45vh;
+        width: 65vw;
     }
 
     @include mixins.breakpoint(tablet) {
-        padding: 30px;
-        height: 80vh;
-        width: 40vw;
+        height: 50vh;
+        padding: 15px;
+        width: 50vw;
     }
 
     @include mixins.breakpoint(laptop) {
-        height: 65vh;
-        width: 30vw;
+        height: 45vh;
+        width: 35vw;
     }
     @include mixins.breakpoint(ldesktop) {
         height: 44vh;

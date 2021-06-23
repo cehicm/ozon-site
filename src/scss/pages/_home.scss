@@ -36,6 +36,7 @@
 
 .review {
     text-align: center;
+
     @include mixins.breakpoint(laptop) {
         margin: 10px 0 120px 0px;
     }
@@ -52,35 +53,34 @@
     }
 
     &-content {
-        width: 100%;
-        padding: 35px 20px;
-        margin-bottom: 15px;
-        border-bottom: 1px solid dashed;
-        background-color: #ffffff;
         animation: hide-me 3s;
+        background-color: variables.$blue;
+        color: #fff;
+        border: 1px solid variables.$black;
+        margin-bottom: 15px;
+        padding: 35px;
+        width: 90vw;
 
         .quote-icon {
             height: 1rem;
             width: 2rem;
-            fill: variables.$black;
+            @include mixins.breakpoint(laptop) {
+                height: 2rem;
+            }
         }
 
         @include mixins.breakpoint(phablet) {
-            width: 80%;
-            margin-bottom: 20px;
-        }
-
-        @include mixins.breakpoint(tablet) {
-            width: 100%;
-            padding: 80px 20px;
-            font-weight: 600;
+            height: 10vh;
+            margin-bottom: 15px;
+            padding: 35px;
+            width: 70vw;
         }
 
         @include mixins.breakpoint(laptop) {
-            width: 30%;
+            width: 40vw;
+            margin-right: 20px;
             height: auto;
             padding: 56px 20px;
-            border: 1px solid variables.$black;
         }
         @include mixins.breakpoint(ldesktop) {
             height: 19vh;

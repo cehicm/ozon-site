@@ -30,25 +30,25 @@ th {
 }
 @media (min-width: 37.5rem) {
   h1,
-  h2,
-  thead,
-  th {
+h2,
+thead,
+th {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 64rem) {
   h1,
-  h2,
-  thead,
-  th {
+h2,
+thead,
+th {
     font-size: 2.3rem;
   }
 }
 @media (min-width: 130rem) {
   h1,
-  h2,
-  thead,
-  th {
+h2,
+thead,
+th {
     font-size: 3rem;
   }
 }
@@ -83,7 +83,7 @@ th {
 }
 @media (min-width: 64rem) {
   .flex-contact-info p,
-  .flex-contact-info a {
+.flex-contact-info a {
     font-size: 1.3rem;
     font-weight: 500;
     line-height: 28px;
@@ -91,7 +91,7 @@ th {
 }
 @media (min-width: 130rem) {
   .flex-contact-info p,
-  .flex-contact-info a {
+.flex-contact-info a {
     font-size: 2rem;
     font-weight: 500;
     line-height: 42px;
@@ -103,23 +103,22 @@ th {
     justify-content: center;
   }
 }
-.menu .item {
+
+.item,
+.subitem {
   text-align: center;
 }
+@media (min-width: 37.5rem) {
+  .item,
+.subitem {
+    font-size: 1.3rem;
+  }
+}
 @media (min-width: 64rem) {
-  .menu .item a {
-    padding: 18px 4px;
-    font-size: 1.6rem;
+  .item,
+.subitem {
+    font-size: 1.7rem;
   }
-}
-@media (min-width: 130rem) {
-  .menu .item a {
-    font-size: 2.2rem;
-  }
-}
-
-.has-submenu i {
-  font-size: 0.63rem;
 }
 
 .toggle {
@@ -132,23 +131,13 @@ th {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 50rem) {
+  .toggle {
+    font-size: 1.9rem;
+  }
+}
 @media (min-width: 64rem) {
   .toggle {
-    font-size: 2rem;
-  }
-}
-
-.item {
-  font-size: 1rem;
-}
-
-@media (min-width: 50rem) {
-  .item {
-    font-size: 1.7rem;
-  }
-}
-@media (min-width: 64rem) {
-  .item {
     font-size: 2rem;
   }
 }
@@ -204,6 +193,11 @@ th {
 .services-calc .services-calc-form .calc-form-input {
   font-size: 1rem;
 }
+@media (min-width: 50rem) {
+  .services-calc .services-calc-form .calc-form-input {
+    font-size: 1.2rem;
+  }
+}
 @media (min-width: 64rem) {
   .services-calc .services-calc-form .calc-form-input {
     font-size: 1.5rem;
@@ -245,15 +239,15 @@ th {
 }
 @media (min-width: 64rem) {
   .services-calc .services-calc-form .select-calc,
-  .services-calc .services-calc-form .select-calc:invalid,
-  .services-calc .services-calc-form option {
+.services-calc .services-calc-form .select-calc:invalid,
+.services-calc .services-calc-form option {
     font-size: 1.1rem;
   }
 }
 @media (min-width: 130rem) {
   .services-calc .services-calc-form .select-calc,
-  .services-calc .services-calc-form .select-calc:invalid,
-  .services-calc .services-calc-form option {
+.services-calc .services-calc-form .select-calc:invalid,
+.services-calc .services-calc-form option {
     font-size: 1.4rem;
   }
 }
@@ -352,19 +346,19 @@ th {
 }
 @media (min-width: 37.5rem) {
   .hours-span,
-  .services-price-span {
+.services-price-span {
     font-size: 1rem;
   }
 }
 @media (min-width: 50rem) {
   .hours-span,
-  .services-price-span {
+.services-price-span {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 130rem) {
   .hours-span,
-  .services-price-span {
+.services-price-span {
     font-size: 2rem;
   }
 }
@@ -389,37 +383,33 @@ th {
 }
 @media (min-width: 37.5rem) {
   .services-page-heading,
-  .services-page h4 {
+.services-page h4 {
     font-size: 1.4rem;
   }
 }
 @media (min-width: 64rem) {
   .services-page-heading,
-  .services-page h4 {
+.services-page h4 {
     font-size: 1.9rem;
   }
 }
-.services-page-text,
-.services-page-list {
+.services-page-text, .services-page-list {
   text-align: left;
   font-family: "Open Sans", Impact, Haettenschweiler, sans-serif;
   font-weight: 200;
 }
 @media (min-width: 37.5rem) {
-  .services-page-text,
-  .services-page-list {
+  .services-page-text, .services-page-list {
     font-size: 1.1rem;
   }
 }
 @media (min-width: 50rem) {
-  .services-page-text,
-  .services-page-list {
+  .services-page-text, .services-page-list {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 50rem) {
-  .services-page-text,
-  .services-page-list {
+  .services-page-text, .services-page-list {
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -510,7 +500,7 @@ th {
 }
 .btn-primary:hover {
   transition: 0.5s cubic-bezier(0.47, 0, 0.75, 0.72);
-  background: #4f95da;
+  background: #3f51b5;
   color: #ffffff;
 }
 
@@ -663,6 +653,11 @@ nav {
     height: 1.5rem;
   }
 }
+@media (min-width: 50rem) {
+  .menu .bars-icon {
+    width: 1.2rem;
+  }
+}
 .menu .close-icon {
   box-sizing: border-box;
   stroke: #ffffff;
@@ -695,7 +690,7 @@ nav {
 }
 .menu .item a {
   display: block;
-  padding: 15px 5px;
+  padding: 5px;
   color: #ffffff;
 }
 @media (min-width: 64rem) {
@@ -740,24 +735,11 @@ nav {
     display: block;
     left: 0;
     position: absolute;
-    top: 74px;
     z-index: 1;
-    width: 18vw;
     text-align-last: left;
-  }
-}
-@media (min-width: 64rem) and (min-width: 64rem) {
-  .menu .submenu-active .submenu {
     top: 88px;
     width: 48vw;
   }
-}
-@media (min-width: 64rem) {
-  .menu .submenu-active {
-    border-radius: 0;
-  }
-}
-@media (min-width: 64rem) {
   .menu .toggle {
     display: none;
   }
@@ -769,13 +751,12 @@ nav {
 }
 
 .menu li.subitem a {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .submenu {
   display: none;
 }
-
 .submenu-active {
   background-color: #111;
   border-radius: 3px;
@@ -783,10 +764,6 @@ nav {
 
 .submenu-active .submenu {
   display: block;
-}
-
-.subitem a {
-  padding: 10px 15px;
 }
 
 .services-container {
@@ -835,26 +812,28 @@ nav {
   width: 80vw;
   padding: 14px;
   margin-top: 10px;
-  background-color: #cddeef;
+  color: white;
+  background-color: #3f51b5;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 @media (min-width: 37.5rem) {
   .services-calc-form {
     padding: 40px;
-    height: 65vh;
+    height: 45vh;
+    width: 65vw;
   }
 }
 @media (min-width: 50rem) {
   .services-calc-form {
-    padding: 30px;
-    height: 80vh;
-    width: 40vw;
+    height: 50vh;
+    padding: 15px;
+    width: 50vw;
   }
 }
 @media (min-width: 64rem) {
   .services-calc-form {
-    height: 65vh;
-    width: 30vw;
+    height: 45vh;
+    width: 35vw;
   }
 }
 @media (min-width: 130rem) {
@@ -1174,37 +1153,37 @@ nav {
   }
 }
 .review-content {
-  width: 100%;
-  padding: 35px 20px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid dashed;
-  background-color: #ffffff;
   animation: hide-me 3s;
+  background-color: #3f51b5;
+  color: #fff;
+  border: 1px solid #333333;
+  margin-bottom: 15px;
+  padding: 35px;
+  width: 90vw;
 }
 .review-content .quote-icon {
   height: 1rem;
   width: 2rem;
-  fill: #333333;
+}
+@media (min-width: 64rem) {
+  .review-content .quote-icon {
+    height: 2rem;
+  }
 }
 @media (min-width: 37.5rem) {
   .review-content {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-}
-@media (min-width: 50rem) {
-  .review-content {
-    width: 100%;
-    padding: 80px 20px;
-    font-weight: 600;
+    height: 10vh;
+    margin-bottom: 15px;
+    padding: 35px;
+    width: 70vw;
   }
 }
 @media (min-width: 64rem) {
   .review-content {
-    width: 30%;
+    width: 40vw;
+    margin-right: 20px;
     height: auto;
     padding: 56px 20px;
-    border: 1px solid #333333;
   }
 }
 @media (min-width: 130rem) {
@@ -1424,8 +1403,7 @@ nav {
   font-weight: bold;
   transition: 0.3s;
 }
-.modal-close:hover,
-.modal-close:focus {
+.modal-close:hover, .modal-close:focus {
   color: red;
   cursor: pointer;
 }
@@ -1443,4 +1421,9 @@ nav {
 
 #price-list {
   width: 80vw;
+}
+@media (min-width: 37.5rem) {
+  #price-list {
+    width: 90vw;
+  }
 }
