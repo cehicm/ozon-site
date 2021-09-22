@@ -1,5 +1,7 @@
 soo
-asdasdssss
-
+<<<<<<< HEAD
 
 sdadada
+=======
+
+>>>>>>> 22bc1d7 (new file)
